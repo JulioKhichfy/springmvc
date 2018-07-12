@@ -19,5 +19,8 @@
 	<definition name="index" extends="mainLayout">
 		<put-attribute name="body" value="/WEB-INF/jsp/view/index.jsp" />
 	</definition>
+	<definition name="login" extends="mainLayout">
+		<put-attribute name="body" value="/WEB-INF/jsp/view/login.jsp" />
+	</definition>
 
 </tiles-definitions>

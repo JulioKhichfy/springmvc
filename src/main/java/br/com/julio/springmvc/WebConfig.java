@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -17,32 +18,33 @@ import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.JpaVendorAdapter;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.UrlBasedViewResolver;
 import org.springframework.web.servlet.view.tiles3.TilesConfigurer;
 import org.springframework.web.servlet.view.tiles3.TilesView;
 
-import br.com.julio.springmvc.controller.HomeController;
-import br.com.julio.springmvc.repository.FestaRepository;
-
-@ComponentScan(basePackageClasses = { HomeController.class,FestaRepository.class })
+@ComponentScan(basePackages = "br.com.julio.springmvc")//basePackageClasses={ HomeController.class, FestaRepository.class })
 @Configuration
 @EnableWebMvc
+@EnableWebSecurity
 @EnableTransactionManagement
 @EnableJpaRepositories(basePackages = "br.com.julio.springmvc.repository")
-public class WebConfig implements WebMvcConfigurer {
-
-	/*
-	 * @Bean public ViewResolver internalResourceViewResolver() {
-	 * InternalResourceViewResolver bean = new InternalResourceViewResolver();
-	 * bean.setViewClass(JstlView.class); bean.setPrefix("/WEB-INF/templates/");
-	 * bean.setSuffix(".jsp"); return bean; }
-	 */
-
+public class WebConfig extends WebSecurityConfigurerAdapter implements WebMvcConfigurer {
+	
+	@Autowired
+	private UserDetailsService userDetailsService;
+	
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 
@@ -57,6 +59,56 @@ public class WebConfig implements WebMvcConfigurer {
 		registry.addResourceHandler("/webjars/**").addResourceLocations("/webjars/").resourceChain(false);
 	}
 
+	
+	 @Override
+	  public void addViewControllers(ViewControllerRegistry registry) {
+	    registry.addViewController("/login").setViewName("login");
+	  }
+
+	@Bean
+	public BCryptPasswordEncoder passwordEncoder() {
+		return new BCryptPasswordEncoder();
+	};
+
+	@Override
+	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+		auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder());
+	}
+
+	@Override
+	protected void configure(HttpSecurity http) throws Exception {
+		http.authorizeRequests().anyRequest().hasAnyRole("ADMIN", "USER")
+		.and()
+			.authorizeRequests()
+			.antMatchers("/login**").permitAll()
+			.antMatchers("/webjars/**").permitAll()
+			.antMatchers("/static/**").permitAll()
+			.antMatchers("/images/**").permitAll()
+		.and().formLogin()
+			.usernameParameter("email")
+			.passwordParameter("senha")
+			.loginPage("/login")
+			.loginProcessingUrl("/loginAction").permitAll()
+			 
+		.and().logout().
+			logoutSuccessUrl("/login").permitAll()
+		.and().csrf().disable();
+	}
+
+	//TODO: ver isso
+	/*@Override
+	public void addViewControllers(ViewControllerRegistry registry) {
+		registry.addViewController("/login").setViewName("login");
+	}*/
+
+	/*
+	 * @Bean public ViewResolver internalResourceViewResolver() {
+	 * InternalResourceViewResolver bean = new InternalResourceViewResolver();
+	 * bean.setViewClass(JstlView.class); bean.setPrefix("/WEB-INF/templates/");
+	 * bean.setSuffix(".jsp"); return bean; }
+	 */
+
+	
 	@Bean
 	public UrlBasedViewResolver viewResolver() {
 		UrlBasedViewResolver tilesViewResolver = new UrlBasedViewResolver();
@@ -68,9 +120,10 @@ public class WebConfig implements WebMvcConfigurer {
 	public TilesConfigurer tilesConfigurer() {
 		TilesConfigurer tiles = new TilesConfigurer();
 		tiles.setDefinitions(new String[] { "/WEB-INF/tiles/tiles.xml" });
+		tiles.setCheckRefresh(true);
 		return tiles;
 	}
-	
+
 	@Bean
 	public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
 		LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
@@ -83,36 +136,39 @@ public class WebConfig implements WebMvcConfigurer {
 	}
 
 	@Bean
-	public PlatformTransactionManager transactionManager(EntityManagerFactory emf)
-	{
+	public PlatformTransactionManager transactionManager(EntityManagerFactory emf) {
 		JpaTransactionManager transactionManager = new JpaTransactionManager();
 		transactionManager.setEntityManagerFactory(emf);
 		return transactionManager;
 	}
-	
+
 	@Bean
 	public DataSource dataSource() {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
 		dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-		//dataSource.setDriverClassName("com.mysql.jdbc.Driver");
+		// dataSource.setDriverClassName("com.mysql.jdbc.Driver");
 		dataSource.setUrl("jdbc:mysql://localhost:3306/festasDB");
 		dataSource.setUsername("root");
 		dataSource.setPassword("root");
 		return dataSource;
 	}
 
-	
 	@Bean
-	public PersistenceExceptionTranslationPostProcessor exceptionTranslation()
-	{
+	public PersistenceExceptionTranslationPostProcessor exceptionTranslation() {
 		return new PersistenceExceptionTranslationPostProcessor();
 	}
 
-	Properties additionalProperties() 
-	{
+	Properties additionalProperties() {
 		Properties properties = new Properties();
 		properties.setProperty("hibernate.hbm2ddl.auto", "update");
 		properties.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");
+
+		// Setting C3P0 properties
+		/*properties.setProperty("5", "hibernate.c3p0.min_size");
+		properties.setProperty("20", "hibernate.c3p0.max_size");
+		properties.setProperty("1", "hibernate.c3p0.acquire_increment");
+		properties.setProperty("1800", "hibernate.c3p0.timeout");
+		properties.setProperty("150", "hibernate.c3p0.max_statements");*/
 		return properties;
 	}
 }

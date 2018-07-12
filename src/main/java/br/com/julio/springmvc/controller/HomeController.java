@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import br.com.julio.springmvc.repository.FestaRepository;
@@ -22,6 +23,11 @@ public class HomeController {
 	public ModelAndView exibirHome() {
 		return new ModelAndView("home");
 	}
+	
+	/*@GetMapping(value = "/login")
+	public ModelAndView exibirLogin() {
+		return new ModelAndView("login");
+	}*/
 
 	@RequestMapping(value = { "/index" }, method = { org.springframework.web.bind.annotation.RequestMethod.GET })
 	public ModelAndView index() {

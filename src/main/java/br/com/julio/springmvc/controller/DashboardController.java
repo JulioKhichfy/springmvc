@@ -25,19 +25,19 @@ public class DashboardController {
 		User user = new User();
 		user.setEmail("johndoe123@gmail.com");
 		user.setName("John Doe");
-		user.setAddress("Bangalore, Karnataka");
+		//user.setAddress("Bangalore, Karnataka");
 		User user1 = new User();
 		user1.setEmail("amitsingh@yahoo.com");
 		user1.setName("Amit Singh");
-		user1.setAddress("Chennai, Tamilnadu");
+		//user1.setAddress("Chennai, Tamilnadu");
 		User user2 = new User();
 		user2.setEmail("bipulkumar@gmail.com");
 		user2.setName("Bipul Kumar");
-		user2.setAddress("Bangalore, Karnataka");
+		//user2.setAddress("Bangalore, Karnataka");
 		User user3 = new User();
 		user3.setEmail("prakashranjan@gmail.com");
 		user3.setName("Prakash Ranjan");
-		user3.setAddress("Chennai, Tamilnadu");
+		//user3.setAddress("Chennai, Tamilnadu");
 		return Arrays.asList(user, user1, user2, user3);
 	}
 
