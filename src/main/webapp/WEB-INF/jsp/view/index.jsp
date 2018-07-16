@@ -2,12 +2,10 @@
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 
-	<header class="masthead " style="padding-top: 50px;" >
+	<header class="masthead " style="padding-top: 120px;" >
 		<div class="row borda-verde" >
-			<div class="col-lg-4 borda-laranja" >
-				<img class="somente-desktop-logotipo" src="images/arabesco5.jpg"/>
-				<h1>Pequenos Detalhes Eventos!</h1>
-	
+			<div class="col-lg-8 borda-laranja" >
+				
 				<sec:authorize access="hasRole('ADMIN')">
 	
 					This content will only be visible to users who have
@@ -20,9 +18,10 @@
 					the "USER" authority in their list of <tt>GrantedAuthority</tt>s.
 	
 				</sec:authorize>
-	
+				
+				OLA NOS FAZEMOS FESTAS INFANTIS VEJA ABAIXO
 				<!--Carousel Wrapper-->
-				<div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
+				<div id="carousel-example-2" class="carousel slide carousel-fade motrar-carousel-principal" data-ride="carousel">
 					<!--Indicators-->
 					<ol class="carousel-indicators">
 						<li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
@@ -78,11 +77,10 @@
 		
 				<!--botoes index Wrapper-->
 				<div class="row text-center">
-					<div class="col-lg-4 col-md-6 mb-4">
+					<div class="col-lg-4 col-md-6 col-sm-4">
 						<div class="view overlay rounded z-depth-1">
 							<a href="#meninas" class="js-scroll-trigger"><img src="images/masterhead/meninastemasbtn.jpg" class="img-fluid" alt="Sample project image" /></a>
 						</div>
-	
 						<a href="#meninas" class="btn btn-primary js-scroll-trigger">Temas para elas ;)</a>
 					</div>
 					<div class="col-lg-4 col-md-6 mb-4">
@@ -103,7 +101,7 @@
 				<!--/.botoes index Wrapper-->
 		
 			</div>
-			<div class="col-lg-8 borda-azul" >
+			<div class="col-lg-4 borda-azul" >
 			alou
 			</div>
 		</div>

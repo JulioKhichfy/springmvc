@@ -91,6 +91,9 @@ vtop{
 	.somente-desktop-texto-banner{
 		display:inline;
 	}
+	.motrar-carousel-principal{
+		display: inline; 
+	}
 }
 
 @media screen  and (max-width: 979px) /* Tablet */ {
@@ -115,6 +118,9 @@ vtop{
 	.somente-desktop-texto-banner{
 		display:inline;
 	}
+	.motrar-carousel-principal{
+		display: inline; 
+	}
 }
 
 @media screen and (max-width: 500px) /* Mobile */ {
@@ -138,6 +144,9 @@ vtop{
 	}
 	.somente-desktop-texto-banner{
 		display:none;
+	}
+	.motrar-carousel-principal{
+		display: none; 
 	}
 }
 

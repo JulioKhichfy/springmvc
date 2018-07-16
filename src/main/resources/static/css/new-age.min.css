@@ -411,20 +411,6 @@ footer ul li a.active, footer ul li a:active, footer ul li a:focus,
 	background: linear-gradient(#ff9ff3, #ffd9fa)
 }
 
-.bg-emilia {
-	background: #fefde7;
-	background: -webkit-linear-gradient(#fdcc52, #fdc539);
-	background: linear-gradient(#fdcc52, #fdc539);
-	background-image: url('#{resource["img/sitiobg2.jpg"]}');
-	background-position: center;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover
-	
-	 
-}
-
 .text-primary {
 	color: #fdcc52
 }

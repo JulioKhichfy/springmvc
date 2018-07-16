@@ -22,9 +22,9 @@
 <link href='<spring:url value="/resources/css/simple-line-icons/css/simple-line-icons.css"/>' rel="stylesheet" />
 <!-- Plugin CSS -->
 <link href='<spring:url value="/resources/css/font-awesome/css/font-awesome.css"/>' rel="stylesheet" />
-<link href='<spring:url value="/resources/css/device-mockups/device-mockups.css"/>' rel="stylesheet" />
+<!-- <link href='<spring:url value="/resources/css/device-mockups/device-mockups.css"/>' rel="stylesheet" /> -->
 <link href='<spring:url value="/resources/css/custom.css"/>' rel="stylesheet" />
-<link href='<spring:url value="/resources/css/new-age.min.css"/>' rel="stylesheet" />
+<link href='<spring:url value="/resources/css/new-age.css"/>' rel="stylesheet" />
 <link href='<spring:url value="/resources/css/julio.css"/>' rel="stylesheet" />
 <link href='<spring:url value="/resources/css/lightbox.css"/>' rel="stylesheet" />
 
