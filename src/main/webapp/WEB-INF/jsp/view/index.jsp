@@ -20,7 +20,7 @@
 	
 				</sec:authorize>
 				
-				OLA NOS FAZEMOS FESTAS INFANTIS VEJA ABAIXO
+				OLA NOS FAZEMOS FESTAS INFANTIS VEJA ABAIXO!!!!!
 				<!--Carousel Wrapper-->
 				<div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
 					<!--Indicators-->
@@ -113,44 +113,55 @@
 		</div>
 	</header>
 	</div>
-	
-	<div clss="header-para-celular">
-	<header class="masthead" style="padding-top: 120px;" >
-		
-				OLA NOS FAZEMOS FESTAS INFANTIS VEJA ABAIXO
-				<!--botoes index Wrapper celular-->
-				<div class="container">
-				<div class="row mostrar-opcoes-celular ">
-					<div class="col-sm-4">
+	<br>
+	<div class="header-para-celular">
+		<header class="masthead" style="padding-top: 120px;" >
+			<br>
+			<h3 style="text-align:center; font-family: arial">Mostre seu interesse em nossos temas ou escreva diretamente para nossas decoradoras</h3>
+			<br>
+			<!--botoes index Wrapper celular-->
+			<div class="container">
+				<div class="row justify-content-start">
+					<div class="col-4">
 						<div class="view overlay rounded z-depth-1">
 							<a href="#meninas" class="js-scroll-trigger">
 								<img src="images/masterhead/meninastemasbtn.jpg" class="img-fluid" style="width: 100px; height: 70px" alt="Meninas ;)" />
 							</a>
 						</div>
-						<a href="#meninas" class="btn btn-primary btn-sm js-scroll-trigger">Temas para elas ;)</a>
 					</div>
-					<div class="col-sm-4">
+					<div class="col-4">
 						<div class="view overlay rounded z-depth-1">
 							<a href="#meninos" class="js-scroll-trigger">
 								<img src="images/masterhead/meninostemabtn.jpg" class="img-fluid" style="width: 100px; height: 70px" alt="Meninos ;)" />
 							</a>
 						</div>
-						<a href="#meninos" class="btn  btn-primary btn-sm js-scroll-trigger">Temas para eles ;) </a>
+						
 					</div>
-					<div class="col-sm-4">
+					<div class="col-4">
 						<div class="view overlay rounded z-depth-1">
 							<a href="#adultos" class="js-scroll-trigger">
 								<img src="images/masterhead/adultostemabtn.jpg" class="img-fluid" style="width: 100px; height: 70px" alt="adultos" />
 							</a>
 						</div>
-						<a href="#adultos" class="btn  btn-primary btn-sm js-scroll-trigger">Datas Especiais</a>
+						
 					</div>
 				</div>
+				<br>
+				<div class="row justify-content-start">
+				<div class="col-4" style="text-align:center"><a href="#meninas" class="btn btn-primary custom-btn-menina btn-sm js-scroll-trigger">Elas ;)</a></div>
+				<div class="col-4" style="text-align:center"><a href="#meninos" class="btn btn-primary custom-btn-menino btn-sm js-scroll-trigger">Eles ;) </a></div>
+				<div class="col-4" style="text-align:center"><a href="#adultos" class="btn btn-primary custom-btn-outros btn-sm js-scroll-trigger">Outros</a></div>
 				</div>
-				<!--/.botoes index Wrapper-->
-		
-	</header>
+			</div>
+			<hr>
+			<!--/.botoes index Wrapper-->
+			
+			<h4 style="text-align:left">Fale com nossa decoradora</h4>
+			<a href="#tema-personalizado" class="btn btn-outline-dark btn-sm js-scroll-trigger">Escrever</a>
+		</header>
 	</div>
+	
+	
 	<section class="download bg-meninas" id="meninas">
 		<div class="container">
 			<div class="row">

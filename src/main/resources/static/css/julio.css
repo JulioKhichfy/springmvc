@@ -160,6 +160,23 @@ vtop{
 	
 }
 
+.btn-primary.custom-btn-menina {
+	background-color: #d50acb;
+	border-color: #000;
+}
+.btn-primary.custom-btn-menino {
+	background-color: #729fcf;
+	border-color: #000;
+}
+.btn-primary.custom-btn-outros {
+	background-color: #850505;
+	border-color: #000;
+}
+.btn-primary.custom-btn-decoradora {
+	background-color: #f5e4b0;
+	border-color: #000;
+}
+
 h5 {
     font-size: 1.28571429em;
     font-weight: 700;
