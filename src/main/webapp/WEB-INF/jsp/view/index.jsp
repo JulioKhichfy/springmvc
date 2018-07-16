@@ -2,10 +2,11 @@
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 
-	<header class="masthead " style="padding-top: 120px;" >
-		<div class="row borda-verde" >
+	<div class="header-para-desktop">
+	<header class="masthead" style="padding-top: 120px;" >
+		<div class="container">
+		<div class="row" >
 			<div class="col-lg-8 borda-laranja" >
-				
 				<sec:authorize access="hasRole('ADMIN')">
 	
 					This content will only be visible to users who have
@@ -21,7 +22,7 @@
 				
 				OLA NOS FAZEMOS FESTAS INFANTIS VEJA ABAIXO
 				<!--Carousel Wrapper-->
-				<div id="carousel-example-2" class="carousel slide carousel-fade motrar-carousel-principal" data-ride="carousel">
+				<div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
 					<!--Indicators-->
 					<ol class="carousel-indicators">
 						<li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
@@ -75,26 +76,30 @@
 				</div>
 				<!--/.Carousel Wrapper-->
 		
-				<!--botoes index Wrapper-->
+				<!--botoes index Wrapper desktop-->
 				<div class="row text-center">
-					<div class="col-lg-4 col-md-6 col-sm-4">
+					<div class="col-sm-4">
 						<div class="view overlay rounded z-depth-1">
-							<a href="#meninas" class="js-scroll-trigger"><img src="images/masterhead/meninastemasbtn.jpg" class="img-fluid" alt="Sample project image" /></a>
+							<a href="#meninas" class="js-scroll-trigger">
+								<img src="images/masterhead/meninastemasbtn.jpg" class="img-fluid" alt="Sample project image" />
+							</a>
 						</div>
-						<a href="#meninas" class="btn btn-primary js-scroll-trigger">Temas para elas ;)</a>
+						<a href="#meninas" class="btn btn-primary  js-scroll-trigger">Temas para elas ;)</a>
 					</div>
-					<div class="col-lg-4 col-md-6 mb-4">
+					<div class="col-sm-4">
 						<div class="view overlay rounded z-depth-1">
-							<a href="#meninos" class="js-scroll-trigger"><img src="images/masterhead/meninostemabtn.jpg" class="img-fluid" alt="Sample project image" /></a>
+							<a href="#meninos" class="js-scroll-trigger">
+								<img src="images/masterhead/meninostemabtn.jpg" class="img-fluid" alt="Sample project image" />
+							</a>
 						</div>
-	
 						<a href="#meninos" class="btn  btn-primary js-scroll-trigger">Temas para eles ;) </a>
 					</div>
-					<div class="col-lg-4 col-md-6 mb-4">
+					<div class="col-sm-4">
 						<div class="view overlay rounded z-depth-1">
-							<a href="#adultos" class="js-scroll-trigger"><img src="images/masterhead/adultostemabtn.jpg" class="img-fluid" alt="Sample project image" /></a>
+							<a href="#adultos" class="js-scroll-trigger">
+								<img src="images/masterhead/adultostemabtn.jpg" class="img-fluid" alt="Sample project image" />
+							</a>
 						</div>
-	
 						<a href="#adultos" class="btn  btn-primary js-scroll-trigger">Datas Especiais</a>
 					</div>
 				</div>
@@ -105,8 +110,47 @@
 			alou
 			</div>
 		</div>
+		</div>
 	</header>
+	</div>
 	
+	<div clss="header-para-celular">
+	<header class="masthead" style="padding-top: 120px;" >
+		
+				OLA NOS FAZEMOS FESTAS INFANTIS VEJA ABAIXO
+				<!--botoes index Wrapper celular-->
+				<div class="container">
+				<div class="row mostrar-opcoes-celular ">
+					<div class="col-sm-4">
+						<div class="view overlay rounded z-depth-1">
+							<a href="#meninas" class="js-scroll-trigger">
+								<img src="images/masterhead/meninastemasbtn.jpg" class="img-fluid" style="width: 100px; height: 70px" alt="Meninas ;)" />
+							</a>
+						</div>
+						<a href="#meninas" class="btn btn-primary btn-sm js-scroll-trigger">Temas para elas ;)</a>
+					</div>
+					<div class="col-sm-4">
+						<div class="view overlay rounded z-depth-1">
+							<a href="#meninos" class="js-scroll-trigger">
+								<img src="images/masterhead/meninostemabtn.jpg" class="img-fluid" style="width: 100px; height: 70px" alt="Meninos ;)" />
+							</a>
+						</div>
+						<a href="#meninos" class="btn  btn-primary btn-sm js-scroll-trigger">Temas para eles ;) </a>
+					</div>
+					<div class="col-sm-4">
+						<div class="view overlay rounded z-depth-1">
+							<a href="#adultos" class="js-scroll-trigger">
+								<img src="images/masterhead/adultostemabtn.jpg" class="img-fluid" style="width: 100px; height: 70px" alt="adultos" />
+							</a>
+						</div>
+						<a href="#adultos" class="btn  btn-primary btn-sm js-scroll-trigger">Datas Especiais</a>
+					</div>
+				</div>
+				</div>
+				<!--/.botoes index Wrapper-->
+		
+	</header>
+	</div>
 	<section class="download bg-meninas" id="meninas">
 		<div class="container">
 			<div class="row">
