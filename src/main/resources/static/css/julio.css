@@ -69,28 +69,77 @@ vtop{
 	
 }
 
-
-@media screen and (max-width: 767px){
-    .motrar-carousel-para-celular{
-		display: inline; 
-	}
-	.esconder{
-		display: none;
-	}
-}
-
-@media screen and (min-width: 768px){
-    .motrar-carousel-para-celular{
+@media screen and (min-width: 980px) /* Desktop */ {
+  .motrar-carousel-para-celular{
 		display: none; 
 	}
-	.esconder{
+	.esconder-mural-do-celular{
 		display: inline;
+	}
+	.mostrar-temas-desktop{
+		display: inline;
+	}
+	.mostrar-temas-celular{
+		display: none; 
+	}
+	.somente-desktop-logotipo{
+		display:inline;
+	}
+	.somente-celular-texto-banner{
+		display:none;
+	}
+	.somente-desktop-texto-banner{
+		display:inline;
 	}
 }
 
+@media screen  and (max-width: 979px) /* Tablet */ {
+   .motrar-carousel-para-celular{
+		display: none; 
+	}
+	.esconder-mural-do-celular{
+		display: inline;
+	}
+	.mostrar-temas-desktop{
+		display: inline;
+	}
+	.mostrar-temas-celular{
+		display: none; 
+	}
+	.somente-desktop-logotipo{
+		display:inline;
+	}
+	.somente-celular-texto-banner{
+		display:none;
+	}
+	.somente-desktop-texto-banner{
+		display:inline;
+	}
+}
 
-
-
+@media screen and (max-width: 500px) /* Mobile */ {
+ 	.motrar-carousel-para-celular{
+		display: inline; 
+	}
+	.esconder-mural-do-celular{
+		display: none;
+	}
+	.mostrar-temas-desktop{
+		display: none;
+	}
+	.mostrar-temas-celular{
+		display: inline; 
+	}
+	.somente-desktop-logotipo{
+		display:none;
+	}
+	.somente-celular-texto-banner{
+		display:inline;
+	}
+	.somente-desktop-texto-banner{
+		display:none;
+	}
+}
 
 h5 {
     font-size: 1.28571429em;

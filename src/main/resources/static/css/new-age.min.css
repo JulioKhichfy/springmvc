@@ -52,17 +52,17 @@ section h2 {
 
 #mainNav {
 	border-color: rgba(34, 34, 34, .05);
-	background-color: #fff;
+	background-color: #f3f3f3;
 	-webkit-transition: all .35s;
 	-moz-transition: all .35s;
 	transition: all .35s;
 	font-family: Catamaran, Helvetica, Arial, sans-serif;
 	font-weight: 200;
-	letter-spacing: 1px
+	
 }
 
 #mainNav .navbar-brand {
-	color: #fdcc52;
+	color: #2e3436;
 	font-family: Catamaran, Helvetica, Arial, sans-serif;
 	font-weight: 200;
 	letter-spacing: 1px
@@ -74,7 +74,7 @@ section h2 {
 
 #mainNav .navbar-toggler {
 	font-size: 12px;
-	padding: 8px 10px;
+	padding: 4px 5px;
 	color: #222
 }
 
@@ -105,19 +105,20 @@ section h2 {
 @media ( min-width :992px) {
 	#mainNav {
 		border-color: transparent;
-		background-color: transparent
+		background-color: white;
+		font-size: 40px;
 	}
 	#mainNav .navbar-brand {
 		color: fade(white, 70%)
 	}
 	#mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
-		color: #fff
+		color: #2e3436
 	}
 	#mainNav .navbar-nav>li>a, #mainNav .navbar-nav>li>a:focus {
 		color: rgba(255, 255, 255, .7)
 	}
 	#mainNav .navbar-nav>li>a:focus:hover, #mainNav .navbar-nav>li>a:hover {
-		color: #fff
+		color: #2e3436
 	}
 	#mainNav.navbar-shrink {
 		border-color: rgba(34, 34, 34, .1);
@@ -190,6 +191,7 @@ header.masthead .device-container .screen img {
 		max-width: 325px
 	}
 }
+
 
 section.download {
 	position: relative;

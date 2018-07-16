@@ -9,5 +9,8 @@ import br.com.julio.springmvc.model.User;
 public interface UserRepository extends JpaRepository<User, String>{
 	
 	public User findUserByEmail(String email); 
+	
+	/* @Query("SELECT u FROM users u JOIN FETCH u.authorities WHERE u.email = (:email)")
+	public User findUserByEmail(String email);*/
 
 }

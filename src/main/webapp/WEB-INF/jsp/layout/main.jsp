@@ -9,6 +9,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
+
 <link href='<spring:url value="/webjars/bootstrap/4.1.1/css/bootstrap.min.css"/>' rel="stylesheet" />
 
 
@@ -29,10 +30,10 @@
 
 </head>
 
-<body class="container-fluid">
+<body id="page-top">
 <c:set var="path" value="${pageContext.request.contextPath}" scope="request" />
 
-	<div class="container-fluid" >
+	<div>
 		<tiles:insertAttribute name="header" />
 		<tiles:insertAttribute name="body" />
 		<tiles:insertAttribute name="footer" />

@@ -8,10 +8,10 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "AUTHORITIES")
+@Table(name = "authorities")
 public class Authorities {
 	@Id
-	@Column(name = "AUTHORITY")
+	@Column(name = "authority")
 	private String authority;
 
 	@ManyToOne

@@ -24,6 +24,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
@@ -77,21 +78,24 @@ public class WebConfig extends WebSecurityConfigurerAdapter implements WebMvcCon
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		http.authorizeRequests().anyRequest().hasAnyRole("ADMIN", "USER")
+		http.authorizeRequests()
+		 .antMatchers("/images/**","/webjars/**","/resources/**","/resources/static/**")
+         .permitAll()
+		.antMatchers("/login**").permitAll()
+		.antMatchers("/index**").permitAll()
 		.and()
-			.authorizeRequests()
-			.antMatchers("/login**").permitAll()
-			.antMatchers("/webjars/**").permitAll()
-			.antMatchers("/static/**").permitAll()
-			.antMatchers("/images/**").permitAll()
+			.authorizeRequests().anyRequest().hasAnyRole("ADMIN", "USER")
+				.antMatchers("/login**").permitAll()
+				.antMatchers("/index**").permitAll()
+				.antMatchers("/admin**").hasRole("ADMIN")
 		.and().formLogin()
 			.usernameParameter("email")
 			.passwordParameter("senha")
 			.loginPage("/login")
 			.loginProcessingUrl("/loginAction").permitAll()
+			.failureUrl("/login.jsp?error=true")
 			 
-		.and().logout().
-			logoutSuccessUrl("/login").permitAll()
+		//.and().logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout")).logoutSuccessUrl("/login")
 		.and().csrf().disable();
 	}
 
@@ -164,11 +168,11 @@ public class WebConfig extends WebSecurityConfigurerAdapter implements WebMvcCon
 		properties.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");
 
 		// Setting C3P0 properties
-		/*properties.setProperty("5", "hibernate.c3p0.min_size");
+		properties.setProperty("5", "hibernate.c3p0.min_size");
 		properties.setProperty("20", "hibernate.c3p0.max_size");
 		properties.setProperty("1", "hibernate.c3p0.acquire_increment");
 		properties.setProperty("1800", "hibernate.c3p0.timeout");
-		properties.setProperty("150", "hibernate.c3p0.max_statements");*/
+		properties.setProperty("150", "hibernate.c3p0.max_statements");
 		return properties;
 	}
 }
