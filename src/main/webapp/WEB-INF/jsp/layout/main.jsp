@@ -28,6 +28,7 @@
 <link href='<spring:url value="/resources/css/julio.css"/>' rel="stylesheet" />
 <link href='<spring:url value="/resources/css/lightbox.css"/>' rel="stylesheet" />
 
+
 </head>
 
 <body id="page-top">

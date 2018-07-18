@@ -70,12 +70,7 @@ vtop{
 }
 
 @media screen and (min-width: 980px) /* Desktop */ {
-  .motrar-carousel-para-celular{
-		display: none; 
-	}
-	.esconder-mural-do-celular{
-		display: inline;
-	}
+  
 	.mostrar-temas-desktop{
 		display: inline;
 	}
@@ -97,15 +92,18 @@ vtop{
 	.header-para-desktop{
 		display: inline;
 	}
+	.moisaco-desktop{
+		display: inline;
+	}
+	.moisaco-mobile{
+		display: none;
+	}
+	
+
 }
 
 @media screen  and (max-width: 979px) /* Tablet */ {
-   .motrar-carousel-para-celular{
-		display: none; 
-	}
-	.esconder-mural-do-celular{
-		display: inline;
-	}
+   
 	.mostrar-temas-desktop{
 		display: inline;
 	}
@@ -127,15 +125,18 @@ vtop{
 	.header-para-desktop{
 		display: inline;
 	}
+	.moisaco-desktop{
+		display: inline;
+	}
+	.moisaco-mobile{
+		display: none;
+	}
+	
+	
 }
 
 @media screen and (max-width: 576px) /* Mobile */ {
- 	.motrar-carousel-para-celular{
-		display: inline; 
-	}
-	.esconder-mural-do-celular{
-		display: none;
-	}
+ 	
 	.mostrar-temas-desktop{
 		display: none;
 	}
@@ -156,6 +157,12 @@ vtop{
 	}
 	.header-para-desktop{
 		display: none;
+	}
+	.moisaco-desktop{
+		display: none;
+	}
+	.moisaco-mobile{
+		display: inline;
 	}
 	
 }

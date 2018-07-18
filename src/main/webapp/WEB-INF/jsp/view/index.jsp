@@ -6,7 +6,7 @@
 	<header class="masthead" style="padding-top: 120px;" >
 		<div class="container">
 		<div class="row" >
-			<div class="col-lg-8 borda-laranja" >
+			<div class="col-lg-8" >
 				<sec:authorize access="hasRole('ADMIN')">
 	
 					This content will only be visible to users who have
@@ -21,6 +21,9 @@
 				</sec:authorize>
 				
 				OLA NOS FAZEMOS FESTAS INFANTIS VEJA ABAIXO!!!!!
+				
+				
+				
 				<!--Carousel Wrapper-->
 				<div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
 					<!--Indicators-->
@@ -106,7 +109,7 @@
 				<!--/.botoes index Wrapper-->
 		
 			</div>
-			<div class="col-lg-4 borda-azul" >
+			<div class="col-lg-4" >
 			alou
 			</div>
 		</div>
@@ -114,14 +117,18 @@
 	</header>
 	</div>
 	<br>
+	
 	<div class="header-para-celular">
 		<header class="masthead" style="padding-top: 120px;" >
-			<br>
-			<h3 style="text-align:center; font-family: arial">Mostre seu interesse em nossos temas ou escreva diretamente para nossas decoradoras</h3>
-			<br>
-			<!--botoes index Wrapper celular-->
-			<div class="container">
-				<div class="row justify-content-start">
+		 	<p style="text-align: center;">Festas Infantis, 15 anos e datas especiais</p>
+						
+			<p style="text-align: left;">Navegue pelos temas</p>
+		    
+		    <p style="text-align: center;">Selecione um ou mais temas e clique em "enviar interesse".
+			    Iremos responder como você desejar:Email, Celular ou Whatsapp.</p>
+		   	<div class="container">
+		   	
+			   	<div class="row justify-content-start">
 					<div class="col-4">
 						<div class="view overlay rounded z-depth-1">
 							<a href="#meninas" class="js-scroll-trigger">
@@ -145,18 +152,14 @@
 						</div>
 						
 					</div>
-				</div>
-				<br>
-				<div class="row justify-content-start">
-				<div class="col-4" style="text-align:center"><a href="#meninas" class="btn btn-primary custom-btn-menina btn-sm js-scroll-trigger">Elas ;)</a></div>
-				<div class="col-4" style="text-align:center"><a href="#meninos" class="btn btn-primary custom-btn-menino btn-sm js-scroll-trigger">Eles ;) </a></div>
-				<div class="col-4" style="text-align:center"><a href="#adultos" class="btn btn-primary custom-btn-outros btn-sm js-scroll-trigger">Outros</a></div>
+					<div class="w-100"></div>
+					<div class="col-4" style="text-align:center"><a href="#meninas" class="btn btn-primary custom-btn-menina btn-sm js-scroll-trigger">Elas ;)</a></div>
+					<div class="col-4" style="text-align:center"><a href="#meninos" class="btn btn-primary custom-btn-menino btn-sm js-scroll-trigger">Eles ;) </a></div>
+					<div class="col-4" style="text-align:center"><a href="#adultos" class="btn btn-primary custom-btn-outros btn-sm js-scroll-trigger">Outros</a></div>
+				
 				</div>
 			</div>
-			<hr>
-			<!--/.botoes index Wrapper-->
-			
-			<h4 style="text-align:left">Fale com nossa decoradora</h4>
+		    <p>Caso esteja planejando personalizar seu evento/festa, fale diretamente com a decoradora.</p>
 			<a href="#tema-personalizado" class="btn btn-outline-dark btn-sm js-scroll-trigger">Escrever</a>
 		</header>
 	</div>
@@ -165,8 +168,7 @@
 	<section class="download bg-meninas" id="meninas">
 		<div class="container">
 			<div class="row">
-				<h2 class="section-heading">Temas para as meninas</h2>
-				
+				<h2 class="section-heading">Temas meninas</h2>
 					<c:forEach var="festagirls" items="${festas}" varStatus="status">
 						<c:if test="${(festagirls.sexo eq 'F' || festagirls.sexo eq 'U')}">
 							
@@ -178,16 +180,16 @@
 					            </div>
 					        
 					        
-					            <div class="mostrar-temas-celular card border-primary col-sm-6" style="width: 50px;">
-									<img class="card-img-top center " style="height: 50px; width: 50px;" src="images/festas/${festagirls.nome}/principal.jpg"  alt="${festagirls.nome}"/>
+					            <div class="mostrar-temas-celular card border-primary col-4" >
+									<img class="card-img-top center " style="height: 100px; width: 100px;" src="images/festas/${festagirls.nome}/principal.jpg"  alt="${festagirls.nome}"/>
 					                <div class="card-footer-meninas" style="text-align:center">
-					                     <a href="#${festagirls.nome}" class="btn btn-outline-info btn-sm js-scroll-trigger" role="button" aria-pressed="true">${festagirls.nome}</a>
+					                     <a href="#${festagirls.nome}" class="btn btn-outline-info btn-sm js-scroll-trigger" role="button" aria-pressed="true">
+					                     <font style="font-size: 8px;">${festagirls.nome}</font>
+					                     </a>
 					                </div>
 					            </div>
-					        
 					   </c:if>
 				   </c:forEach>
-		         
 	        </div>  
 	    </div>
     </section>
@@ -228,75 +230,26 @@
 				<br/>
 				<div class="container">
 					<div class="row  justify-content-center">
-						
-						<div class="motrar-carousel-para-celular">
-							<!--Carousel Wrapper-->
-							<div id="carousel-celular${festa.nome}" class="carousel slide carousel-fade" data-ride="carousel">
-								<!--Indicators-->
-								<ol class="carousel-indicators">
-						     		<c:forEach items="${festa.tema.fotos}" varStatus="statusAuxOne">
-							        	<c:if test="${statusAuxOne.index eq 0}">
-							        		<li data-target="#carousel-celular${festa.nome}" data-slide-to="0" class="active"></li>
-							        	</c:if>
-							        	<c:if test="${statusAuxOne.index ne 0}">
-							        		<li data-target="#carousel-celular${festa.nome}" data-slide-to="${statusAuxOne.index}"></li>
-							        	</c:if>
-						        	</c:forEach>
-							    </ol>
-								<!--/.Indicators-->
-								<!--Slides-->
-							 	<div class="carousel-inner" role="listbox">
-									<c:forEach  var="foto" items="${festa.tema.fotos}" varStatus="statusfoto">
-							    		<c:if test="${statusfoto.index eq 0}">
-									        <div class="carousel-item active">
-									            <div class="view">
-									                <img src="images/festas/${festa.nome}/${foto.nomeFoto}" class="d-block w-100" alt="${festa.nome}"/>
-									                <div class="mask rgba-black-light"></div>
-									            </div>
-									            <div class="carousel-caption">
-									                <h3 class="h3-responsive"></h3>
-									                <p></p>
-									            </div>
-									        </div>
-								       </c:if>
-								        <c:if test="${statusfoto.index ne 0}">
-									        <div class="carousel-item">
-									            <div class="view">
-									                 <img src="images/festas/${festa.nome}/${foto.nomeFoto}" class="d-block w-100" alt="${festa.nome}"/>
-									                <div class="mask rgba-black-strong"></div>
-									            </div>
-									            <div class="carousel-caption">
-									                <h3 class="h3-responsive"></h3>
-									                <p></p>
-									            </div>
-									        </div>
-								       </c:if>
-								     
-							       	</c:forEach>
-							    </div>
-					     		<a class="carousel-control-prev" href="#carousel-celular${festa.nome}" role="button" data-slide="prev">
-							        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-							        <span class="sr-only">Previous</span>
-							    </a>
-							    <a class="carousel-control-next" href="#carousel-celular${festa.nome}" role="button" data-slide="next">
-							        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-							        <span class="sr-only">Next</span>
-							    </a>
-							</div>
-							<!--/.Carousel Wrapper-->
-						</div>
-						
-						<div class="esconder-mural-do-celular col-md-12 bg-espaco-fotos-festas para-festas pt-3 py-3">
+						<div class="moisaco-desktop bg-espaco-fotos-festas para-festas pt-3 py-3">
 							<div class="row">
 								<c:forEach var="foto" items="${festa.tema.fotos}" varStatus="statusFotoAux">
 									<a href='<spring:url value="/images/festas/${festa.nome}/${foto.nomeFoto}"/>' class="col-xs-6 col-sm-6 col-md-2  pt-3 py-3" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
-									<img  src="images/festas/${festa.nome}/${foto.nomeFoto}" class="img-fluid"  style="height: 150px; width: 1500px;"/>
+									<img  src="images/festas/${festa.nome}/${foto.nomeFoto}" class="img-fluid"  style="height: 150px; width: 150px;"/>
 									</a>
       							</c:forEach>
 							</div>
-							
 						</div>
-						
+						<div class="moisaco-mobile bg-espaco-fotos-festas para-festas pt-3 py-3">
+							<div class="row">
+								<c:forEach var="foto" items="${festa.tema.fotos}" varStatus="statusFotoAux">
+									<div class="col-4" style="padding: 2px;">
+										<a href='<spring:url value="/images/festas/${festa.nome}/${foto.nomeFoto}"/>' data-lightbox="example-set" data-title="Pequenos detalhes em ${festa.nome}">
+											<img src="images/festas/${festa.nome}/${foto.nomeFoto}" class="img-fluid"  style="height: 80px; width: 90px;"/>
+										</a>
+									</div>
+      							</c:forEach>
+							</div>
+						</div>
 						<p class="text-muted">
 							<a href="#meninas" class="center btn  btn-outline btn-md js-scroll-trigger">Voltar</a>
 						</p>
