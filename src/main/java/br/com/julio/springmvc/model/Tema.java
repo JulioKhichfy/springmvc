@@ -11,6 +11,8 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
 @Entity(name="Tema")
+/*@NamedQuery(name = "Tema.findByFotos",
+query = "select t from Tema t where t.id = ?1")*/
 public class Tema
   implements Serializable
 {
@@ -43,7 +45,7 @@ public class Tema
   }
   
   public List<Foto> getFotos() {
-    System.out.println("pegando fotos");
+    System.out.println("pegando fotos em tema " + fotos.size());
     return fotos;
   }
   

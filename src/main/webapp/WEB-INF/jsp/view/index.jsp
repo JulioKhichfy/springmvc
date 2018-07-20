@@ -215,10 +215,10 @@
 	        </div>  
 	    </div>
     </section>
-    
-    <c:forEach var="festa" items="${festas}" varStatus="principal">
-		<section class="features py-0 mt-5" id="${festa.nome}">
-			<div class="container-fluid">
+     
+     <c:forEach var="festa" items="${festas}" varStatus="principal">
+    	<section class="features py-0 mt-5" id="${festa.nome}">
+   		<div class="container-fluid">
 				<div class="section-heading text-center mt-0">
 					<h2> Festa: ${festa.nome} </h2>
 					
@@ -228,8 +228,9 @@
 					</button>
 				</div> 
 				<br/>
-				<div class="container">
-					<div class="row  justify-content-center">
+				
+					<div class="row">
+						
 						<div class="moisaco-desktop bg-espaco-fotos-festas para-festas pt-3 py-3">
 							<div class="row">
 								<c:forEach var="foto" items="${festa.tema.fotos}" varStatus="statusFotoAux">
@@ -239,27 +240,28 @@
       							</c:forEach>
 							</div>
 						</div>
-						<div class="moisaco-mobile bg-espaco-fotos-festas para-festas pt-3 py-3">
-							<div class="row">
+						<div class="moisaco-mobile ">
+							<div class='col-sm-4'>
 								<c:forEach var="foto" items="${festa.tema.fotos}" varStatus="statusFotoAux">
-									<div class="col-4" style="padding: 2px;">
-										<a href='<spring:url value="/images/festas/${festa.nome}/${foto.nomeFoto}"/>' data-lightbox="example-set" data-title="Pequenos detalhes em ${festa.nome}">
-											<img src="images/festas/${festa.nome}/${foto.nomeFoto}" class="img-fluid"  style="height: 80px; width: 90px;"/>
-										</a>
-									</div>
-      							</c:forEach>
-							</div>
-						</div>
-						<p class="text-muted">
-							<a href="#meninas" class="center btn  btn-outline btn-md js-scroll-trigger">Voltar</a>
-						</p>
+						            <a href='<spring:url value="/images/festas/${festa.nome}/${foto.nomeFoto}"/>' data-fancybox="gallery" data-caption="Caption #1">
+										<img style="width: 100px; height: 100px" src="images/festas/${festa.nome}/${foto.nomeFoto}" alt="" />
+									</a>
+			            		</c:forEach>
+		            		</div>
+			            </div>
+						<div class="carousel slide article-slide" id="article-photo-carousel">
+
+						
 					</div>
-					
-				</div> <!-- <div class="container"> -->
+					<p class="text-muted">
+						<a href="#meninas" class="center btn  btn-outline btn-md js-scroll-trigger">Voltar!</a>
+					</p>
 				
-			</div> <!-- <div class="container-fluid"> --> 
+				
+			</div>
+			</div> <!-- <div class="container-fluid"> -->
 		</section>
-	</c:forEach>
+	</c:forEach> 
 	
 	<section class="cta">
 		<div class="cta-content">

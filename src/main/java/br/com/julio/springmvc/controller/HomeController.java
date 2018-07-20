@@ -1,5 +1,7 @@
 package br.com.julio.springmvc.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -8,6 +10,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import br.com.julio.springmvc.model.Festa;
+import br.com.julio.springmvc.model.Foto;
+import br.com.julio.springmvc.model.Tema;
 import br.com.julio.springmvc.repository.FestaRepository;
 
 @Controller
@@ -38,7 +43,14 @@ public class HomeController {
 	public ModelAndView index() {
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 		ModelAndView mv = new ModelAndView("index");
-		mv.addObject("festas", festaRepository.findAll());
+		List<Festa> festas = festaRepository.findAll();
+		for(Festa f : festas) {
+			
+			//Tema t = f.getTema();
+			//List<Foto> fs = t.getFotos();
+			System.out.println("festas no controller " +f.getNome());
+		}
+		mv.addObject("festas", festas);
 		return mv;
 	}
 	/*@RequestMapping(value="/logout", method = RequestMethod.GET)

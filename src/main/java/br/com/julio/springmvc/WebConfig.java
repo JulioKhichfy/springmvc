@@ -166,13 +166,24 @@ public class WebConfig extends WebSecurityConfigurerAdapter implements WebMvcCon
 		Properties properties = new Properties();
 		properties.setProperty("hibernate.hbm2ddl.auto", "update");
 		properties.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");
-
+		properties.setProperty("org.hibernate.SQL", "true");
+		
 		// Setting C3P0 properties
-		properties.setProperty("5", "hibernate.c3p0.min_size");
-		properties.setProperty("20", "hibernate.c3p0.max_size");
-		properties.setProperty("1", "hibernate.c3p0.acquire_increment");
-		properties.setProperty("1800", "hibernate.c3p0.timeout");
-		properties.setProperty("150", "hibernate.c3p0.max_statements");
+		/*properties.setProperty("hibernate.c3p0.min_size","5");
+		properties.setProperty("hibernate.c3p0.max_size","20");
+		properties.setProperty("hibernate.c3p0.acquire_increment","1");
+		properties.setProperty("hibernate.c3p0.timeout","1800");
+		properties.setProperty("hibernate.c3p0.max_statements","150");*/
+		
+		//show sql statement
+		properties.setProperty("spring.jpa.show-sql" ,"true");
+		//show sql values
+		properties.setProperty("sspring.jpa.properties.hibernate.use_sql_comments" ,"true");
+		
+		properties.setProperty("spring.jpa.properties.hibernate.format_sql" ,"true");
+		
+		properties.setProperty("spring.jpa.properties.hibernate.type","trace"); 
+		
 		return properties;
 	}
 }

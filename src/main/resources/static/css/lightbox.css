@@ -15,7 +15,7 @@ html.lb-disable-scrolling {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   opacity: 0.8;
   display: none;
-}
+} 
 
 .lightbox {
   position: absolute;
@@ -76,7 +76,7 @@ html.lb-disable-scrolling {
   width: 32px;
   height: 32px;
   margin: 0 auto;
-  background: url("#{resource['img/loading.gif']}") no-repeat;
+  background: url("#{resources['images/loading.gif']}") no-repeat;
 }
 
 .lb-nav {
@@ -107,7 +107,7 @@ html.lb-disable-scrolling {
   width: 34%;
   left: 0;
   float: left;
-  background: url("#{resource['img/prev.png']}") left 48% no-repeat;
+  background: url('WEB-INF/images/prev.png') left 48% no-repeat;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   -webkit-transition: opacity 0.6s;
@@ -125,7 +125,8 @@ html.lb-disable-scrolling {
   width: 64%;
   right: 0;
   float: right;
-  background: url("#{resource['img/next.png']}") right 48% no-repeat;
+  
+  background: url("#{resources['../images/next.png") right 48% no-repeat;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   -webkit-transition: opacity 0.6s;
@@ -189,7 +190,7 @@ html.lb-disable-scrolling {
   float: right;
   width: 30px;
   height: 30px;
-  background: url("#{resource['img/close.png']}") top right no-repeat;
+  background: url("#{resources['images/close.png']}") top right no-repeat;
   text-align: right;
   outline: none;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
