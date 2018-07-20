@@ -164,22 +164,20 @@
 		</header>
 	</div>
 	
-	
+	<c:set var="variavelFestas" value="${festas}" scope="request" />
+	<label>aqui um teste da variavel</label>
 	<section class="download bg-meninas" id="meninas">
 		<div class="container">
 			<div class="row">
 				<h2 class="section-heading">Temas meninas</h2>
-					<c:forEach var="festagirls" items="${festas}" varStatus="status">
+					<c:forEach var="festagirls" items="${variavelFestas}" varStatus="status">
 						<c:if test="${(festagirls.sexo eq 'F' || festagirls.sexo eq 'U')}">
-							
 					            <div class="mostrar-temas-desktop card border-primary col-md-4" style="width: 200px;">
 									<img class="card-img-top center " style="height: 200px; width: 200px;" src="images/festas/${festagirls.nome}/principal.jpg"  alt="${festagirls.nome}"/>
 					                <div class="card-footer-meninas" style="text-align:center">
 					                     <a href="#${festagirls.nome}" class="btn btn-outline-info btn-sm js-scroll-trigger" role="button" aria-pressed="true">${festagirls.nome}</a>
 					                </div>
 					            </div>
-					        
-					        
 					            <div class="mostrar-temas-celular card border-primary col-4" >
 									<img class="card-img-top center " style="height: 100px; width: 100px;" src="images/festas/${festagirls.nome}/principal.jpg"  alt="${festagirls.nome}"/>
 					                <div class="card-footer-meninas" style="text-align:center">
@@ -196,69 +194,66 @@
 	<section class="download bg-meninos" id="meninos">
 		<div class="container">
 			<div class="row">
-				<h2 class="section-heading">Temas para os meninos.</h2>
-				<div class="row container">
-					<c:forEach var="festaboys" items="${festas}" varStatus="status" >
+				<h2 class="section-heading">Temas meninos</h2>
+					<c:forEach var="festaboys" items="${variavelFestas}" varStatus="status" >
 						<c:if test="${festaboys.sexo eq 'M' || festaboys.sexo eq 'U'}">
-							<div class="col-sm-6 col-md-4 col-lg-3 mt-4">
-					            <div class="card border-primary" style="width: 200px;" >
-									<img class="card-img-top center "  style="height: 200px; width: 200px;" src="images/festas/${festaboys.nome}/principal.jpg"  alt="${festaboys.nome}"/>
-					                <div class="card-footer-meninos"  style="text-align:center">
-					                     <a href="#${festaboys.nome}" class="btn btn-outline-info btn-sm js-scroll-trigger" role="button" aria-pressed="true">${festaboys.nome}</a>
-					                </div>
-					            </div>
-					        </div>
+							<div class="mostrar-temas-desktop card border-primary col-md-4" style="width: 200px;">
+								<img class="card-img-top center " style="height: 200px; width: 200px;" src="images/festas/${festaboys.nome}/principal.jpg"  alt="${festaboys.nome}"/>
+				                <div class="card-footer-meninas" style="text-align:center">
+				                     <a href="#${festagirls.nome}" class="btn btn-outline-info btn-sm js-scroll-trigger" role="button" aria-pressed="true">${festaboys.nome}</a>
+				                </div>
+				           	</div>
+				            <div class="mostrar-temas-celular card border-primary col-4" >
+								<img class="card-img-top center " style="height: 100px; width: 100px;" src="images/festas/${festaboys.nome}/principal.jpg"  alt="${festaboys.nome}"/>
+				                <div class="card-footer-meninas" style="text-align:center">
+				                     <a href="#${festagirls.nome}" class="btn btn-outline-info btn-sm js-scroll-trigger" role="button" aria-pressed="true">
+				                     	<font style="font-size: 8px;">${festaboys.nome}</font>
+				                     </a>
+				                </div>
+				            </div>
 					    </c:if> 
-						
 			        </c:forEach>
 		        </div>
 	        </div>  
-	    </div>
     </section>
      
-     <c:forEach var="festa" items="${festas}" varStatus="principal">
+     <c:forEach var="festa" items="${variavelFestas}" varStatus="principal">
     	<section class="features py-0 mt-5" id="${festa.nome}">
-   		<div class="container-fluid">
+   			<div class="container-fluid">
 				<div class="section-heading text-center mt-0">
 					<h2> Festa: ${festa.nome} </h2>
-					
 					<!-- Button to Open the Modal -->
 					  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" data-whatever="${festa.nome}">
 					    Enviar Interesse :) 
 					</button>
 				</div> 
-				<br/>
-				
-					<div class="row">
-						
-						<div class="moisaco-desktop bg-espaco-fotos-festas para-festas pt-3 py-3">
-							<div class="row">
-								<c:forEach var="foto" items="${festa.tema.fotos}" varStatus="statusFotoAux">
-									<a href='<spring:url value="/images/festas/${festa.nome}/${foto.nomeFoto}"/>' class="col-xs-6 col-sm-6 col-md-2  pt-3 py-3" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
-									<img  src="images/festas/${festa.nome}/${foto.nomeFoto}" class="img-fluid"  style="height: 150px; width: 150px;"/>
-									</a>
-      							</c:forEach>
-							</div>
-						</div>
-						<div class="moisaco-mobile ">
-							<div class='col-sm-4'>
-								<c:forEach var="foto" items="${festa.tema.fotos}" varStatus="statusFotoAux">
-						            <a href='<spring:url value="/images/festas/${festa.nome}/${foto.nomeFoto}"/>' data-fancybox="gallery" data-caption="Caption #1">
-										<img style="width: 100px; height: 100px" src="images/festas/${festa.nome}/${foto.nomeFoto}" alt="" />
-									</a>
-			            		</c:forEach>
-		            		</div>
-			            </div>
-						<div class="carousel slide article-slide" id="article-photo-carousel">
-
-						
+				<div class="row">
+					<div class="moisaco-desktop">
+						<div class='col-3'>
+							<c:forEach var="foto" items="${festa.tema.fotos}" varStatus="statusFotoAux">
+					            <a href='<spring:url value="/images/festas/${festa.nome}/${foto.nomeFoto}"/>' data-fancybox="gallery" data-caption="Caption #1">
+									<img style="width: 400px; height: 400px" src="images/festas/${festa.nome}/${foto.nomeFoto}" alt="" />
+								</a>
+		            		</c:forEach>
+	            		</div>
 					</div>
-					<p class="text-muted">
-						<a href="#meninas" class="center btn  btn-outline btn-md js-scroll-trigger">Voltar!</a>
-					</p>
-				
-				
-			</div>
+					<div class="moisaco-mobile">
+						<div class='col-sm-4'>
+							<c:forEach var="foto" items="${festa.tema.fotos}" varStatus="statusFotoAux">
+					            <a href='<spring:url value="/images/festas/${festa.nome}/${foto.nomeFoto}"/>' data-fancybox="gallery" data-caption="Caption #1">
+									<img style="width: 100px; height: 100px" src="images/festas/${festa.nome}/${foto.nomeFoto}" alt="" />
+								</a>
+		            		</c:forEach>
+	            		</div>
+		            </div>
+				</div>
+				<div class="row">
+					<div class="col-6">
+						<p class="text-muted">
+							<a href="#meninas" class="center btn  btn-outline btn-md js-scroll-trigger">Voltar!</a>
+						</p>
+					</div>
+				</div>
 			</div> <!-- <div class="container-fluid"> -->
 		</section>
 	</c:forEach> 
