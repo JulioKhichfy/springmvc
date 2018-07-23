@@ -27,12 +27,10 @@
 <!-- <link href='<spring:url value="/resources/css/device-mockups/device-mockups.css"/>' rel="stylesheet" /> -->
 <link href='<spring:url value="/resources/css/new-age.css"/>' rel="stylesheet" />
 <link href='<spring:url value="/resources/css/jquery.fancybox.css"/>' rel="stylesheet" />
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
-
-
-
-
-
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">-->
+<link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Griffy' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Julee' rel='stylesheet'>
 <link href='<spring:url value="/resources/css/julio.css"/>' rel="stylesheet" />
 <link href='<spring:url value="/resources/css/custom.css"/>' rel="stylesheet" />
 </head>

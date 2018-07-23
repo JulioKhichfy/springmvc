@@ -167,51 +167,46 @@
 	<c:set var="variavelFestas" value="${festas}" scope="request" />
 	<section class="download bg-meninas" id="meninas">
 		<div class="container">
-			<h2 class="section-heading">Temas meninas</h2>
-			<i class="fas fa-address-book"></i>
 			<div class="row">
-				
-					<c:forEach var="festagirls" items="${variavelFestas}" varStatus="status">
-						<c:if test="${(festagirls.sexo eq 'F' || festagirls.sexo eq 'U')}">
-					            <div class="col-3 col-sm-4 col-md-4 col-lg-4 col-xl-6" style="padding-bottom: 5px;">
-						            <div class="card" style="padding:5px">
-										<!--  classes de img : card-img-top center -->
-										<img class="temas center" src="images/festas/${festagirls.nome}/principal.jpg"  alt="${festagirls.nome}"/>
-						            </div>
-						                <a href="#${festagirls.nome}" class="js-scroll-trigger" role="button" aria-pressed="true">
-							            	<font>${festagirls.nome}</font>
-							            </a>
-							            
-					            </div>
-					   </c:if>
-				   </c:forEach>
+				<div class="col-12" style="text-align: center;" >
+					<span class="titleTemaMenina">Temas meninas</span>
+				</div>
+				<c:forEach var="festagirls" items="${variavelFestas}" varStatus="status">
+					<c:if test="${(festagirls.sexo eq 'F' || festagirls.sexo eq 'U')}">
+			            <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-6  align-middle" style="padding-bottom: 8px;" >
+				            <div class="card" >
+								<!--  classes de img : card-img-top center -->
+								<img class="temas" src="images/festas/${festagirls.nome}/principal.jpg"  alt="${festagirls.nome}"/>
+				            </div>
+			                <a href="#${festagirls.nome}" class="js-scroll-trigger btn-primary btn-sm  " role="button" aria-pressed="true">
+				            	<font class="nomeTema">${festagirls.nome}</font>
+				            </a>
+			            </div>
+				   </c:if>
+			   </c:forEach>
 	        </div>  
 	    </div>
     </section>
 	<section class="download bg-meninos" id="meninos">
 		<div class="container">
 			<div class="row">
-				<h2 class="section-heading">Temas meninos</h2>
-					<c:forEach var="festaboys" items="${variavelFestas}" varStatus="status" >
-						<c:if test="${festaboys.sexo eq 'M' || festaboys.sexo eq 'U'}">
-							<div class="mostrar-temas-desktop card border-primary col-md-4" style="width: 200px;">
-								<img class="card-img-top center " style="height: 200px; width: 200px;" src="images/festas/${festaboys.nome}/principal.jpg"  alt="${festaboys.nome}"/>
-				                <div class="card-footer-meninas" style="text-align:center">
-				                     <a href="#${festagirls.nome}" class="btn btn-outline-info btn-sm js-scroll-trigger" role="button" aria-pressed="true">${festaboys.nome}</a>
-				                </div>
-				           	</div>
-				            <div class="mostrar-temas-celular card border-primary col-4" >
-								<img class="card-img-top center " style="height: 100px; width: 100px;" src="images/festas/${festaboys.nome}/principal.jpg"  alt="${festaboys.nome}"/>
-				                <div class="card-footer-meninas" style="text-align:center">
-				                     <a href="#${festagirls.nome}" class="btn btn-outline-info btn-sm js-scroll-trigger" role="button" aria-pressed="true">
-				                     	<font style="font-size: 8px;">${festaboys.nome}</font>
-				                     </a>
-				                </div>
-				            </div>
-					    </c:if> 
-			        </c:forEach>
-		        </div>
-	        </div>  
+				<div class="col-12" style="text-align: center;">
+					<span class="titleTemaMenino">Temas meninos</span>
+				</div>
+				<c:forEach var="festaboys" items="${variavelFestas}" varStatus="status" >
+					<c:if test="${festaboys.sexo eq 'M' || festaboys.sexo eq 'U'}">
+						 <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-6 align-middle" style="padding-bottom: 8px;" >
+							<div class="card" >
+								<img class="temas" src="images/festas/${festaboys.nome}/principal.jpg"  alt="${festaboys.nome}"/>
+							</div>
+		                     <a href="#${festagirls.nome}" class="js-scroll-trigger btn-primary btn-sm " role="button" aria-pressed="true">
+		                     	<font class="nomeTema">${festaboys.nome}</font>
+		                     </a>
+			           	</div>
+				    </c:if> 
+		        </c:forEach>
+	        </div>
+        </div>  
     </section>
      
      <c:forEach var="festa" items="${variavelFestas}" varStatus="principal">

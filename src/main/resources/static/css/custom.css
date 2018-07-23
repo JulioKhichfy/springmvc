@@ -28,18 +28,24 @@ div .borda-laranja{
 
 @media screen and (max-width: 575.98px) {
 	
+	.card {
+		width: 100px;
+		height: 100px;
+	}
+	.titleTemaMenina{
+		font-family: 'Griffy';font-size: 50px;
+	}
+	.titleTemaMenino{
+		font-family: 'Julee';font-size: 50px; text-align: center;
+	}
 	.temas {
 		width: 100px;
 		height: 100px;
 	}
-	
-	.card-footer-meninas{
-		width: 100px;
+	.nomeTema{
+		font-family: 'Sofia';font-size: 16px;
 	}
-	.card-footer-meninas a{
-		font-size: 8px;
-	}
-	
+		
 	.somente-desktop-logotipo{
 		display:none;
 	}
@@ -66,19 +72,26 @@ div .borda-laranja{
 
 
 @media screen and (min-width: 576px) and (max-width: 767.98px) {
+	.card{
+		width: 200px;
+	}
+	.titleTemaMenina{
+		font-family: 'Griffy';font-size: 60px; text-align: center;
+	}
+	.titleTemaMenino{
+		font-family: 'Julee';font-size: 60px; text-align: center;
+	}
 	.temas {
 		width: 200px;
 		height: 200px;
 	}
-	.card{
-		width: 200px;
+	.nomeTema{
+		font-family: 'Sofia';font-size: 18px;
 	}
-	.card-footer-meninas{
-		width: 200px;
-	}
-	.card-footer-meninas a{
-		font-size: 10px;
-	}
+	
+	
+	
+	
 	.somente-desktop-logotipo{
 		display:none;
 	}
@@ -112,12 +125,16 @@ div .borda-laranja{
 	.card{
 		width: 300px;
 	}
-	.card-footer-meninas{
-		width: 300px;
+	.titleTemaMenina{
+		font-family: 'Griffy';font-size: 70px; text-align: center;
 	}
-	.card-footer-meninas a{
-		font-size: 14px;
+	.titleTemaMenino{
+		font-family: 'Julee';font-size: 70px; text-align: center;
 	}
+	.nomeTema{
+		font-family: 'Sofia';font-size: 20px;
+	}
+	
 	.somente-desktop-logotipo{
 		display:inline;
 	}
@@ -151,13 +168,16 @@ div .borda-laranja{
 	.card{
 		width: 350px;
 	}
-	.card-footer-meninas{
-		width: 350px;
+	.titleTemaMenina{
+		font-family: 'Griffy';font-size: 75px; text-align: center;
 	}
-	.card-footer-meninas a{
-		font-size: 12px;
-		
+	.titleTemaMenino{
+		font-family: 'Julee';font-size: 75px; text-align: center;
 	}
+	.nomeTema{
+		font-family: 'Sofia';font-size: 24px;
+	}
+	
 	.somente-desktop-logotipo{
 		display:inline;
 	}
@@ -191,12 +211,14 @@ div .borda-laranja{
 	.card{
 		width: 400px;
 	}
-	.card-footer-meninas{
-		width: 400px;
+	.titleTemaMenina{
+		font-family: 'Griffy';font-size: 80px; text-align: center;
 	}
-	.card-footer-meninas a{
-		font-size: 14px;
-		
+	.titleTemaMenino{
+		font-family: 'Julee';font-size: 80px; text-align: center;
+	}
+	.nomeTema{
+		font-family: 'Sofia';font-size: 40px;
 	}
 	.somente-desktop-logotipo{
 		display:inline;
