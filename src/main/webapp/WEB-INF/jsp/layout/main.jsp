@@ -27,9 +27,10 @@
 <!-- <link href='<spring:url value="/resources/css/device-mockups/device-mockups.css"/>' rel="stylesheet" /> -->
 <link href='<spring:url value="/resources/css/new-age.css"/>' rel="stylesheet" />
 <link href='<spring:url value="/resources/css/jquery.fancybox.css"/>' rel="stylesheet" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
 
 
-<!-- <link href='<spring:url value="/resources/css/lightbox.css"/>' rel="stylesheet" />-->
+
 
 
 <link href='<spring:url value="/resources/css/julio.css"/>' rel="stylesheet" />

@@ -168,18 +168,20 @@
 	<section class="download bg-meninas" id="meninas">
 		<div class="container">
 			<h2 class="section-heading">Temas meninas</h2>
+			<i class="fas fa-address-book"></i>
 			<div class="row">
 				
 					<c:forEach var="festagirls" items="${variavelFestas}" varStatus="status">
 						<c:if test="${(festagirls.sexo eq 'F' || festagirls.sexo eq 'U')}">
-					            <div class="col-3 col-sm-4 col-md-4 col-lg-4 col-xl-6" style="padding-bottom: 16px">
-					            <div class="card" >
-									<!--  classes de img : card-img-top center -->
-									<img class="temas center" src="images/festas/${festagirls.nome}/principal.jpg"  alt="${festagirls.nome}"/>
-					                <div class="card-footer-meninas">
-					                     <a href="#${festagirls.nome}" class="btn btn-outline-info btn-sm js-scroll-trigger" role="button" aria-pressed="true">${festagirls.nome}</a>
-					                </div>
-					            </div>
+					            <div class="col-3 col-sm-4 col-md-4 col-lg-4 col-xl-6" style="padding-bottom: 5px;">
+						            <div class="card" style="padding:5px">
+										<!--  classes de img : card-img-top center -->
+										<img class="temas center" src="images/festas/${festagirls.nome}/principal.jpg"  alt="${festagirls.nome}"/>
+						            </div>
+						                <a href="#${festagirls.nome}" class="js-scroll-trigger" role="button" aria-pressed="true">
+							            	<font>${festagirls.nome}</font>
+							            </a>
+							            
 					            </div>
 					   </c:if>
 				   </c:forEach>
