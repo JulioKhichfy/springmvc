@@ -165,26 +165,21 @@
 	</div>
 	
 	<c:set var="variavelFestas" value="${festas}" scope="request" />
-	<label>aqui um teste da variavel</label>
 	<section class="download bg-meninas" id="meninas">
 		<div class="container">
+			<h2 class="section-heading">Temas meninas</h2>
 			<div class="row">
-				<h2 class="section-heading">Temas meninas</h2>
+				
 					<c:forEach var="festagirls" items="${variavelFestas}" varStatus="status">
 						<c:if test="${(festagirls.sexo eq 'F' || festagirls.sexo eq 'U')}">
-					            <div class="mostrar-temas-desktop card border-primary col-md-4" style="width: 200px;">
-									<img class="card-img-top center " style="height: 200px; width: 200px;" src="images/festas/${festagirls.nome}/principal.jpg"  alt="${festagirls.nome}"/>
-					                <div class="card-footer-meninas" style="text-align:center">
+					            <div class="col-3 col-sm-4 col-md-4 col-lg-4 col-xl-6" style="padding-bottom: 16px">
+					            <div class="card" >
+									<!--  classes de img : card-img-top center -->
+									<img class="temas center" src="images/festas/${festagirls.nome}/principal.jpg"  alt="${festagirls.nome}"/>
+					                <div class="card-footer-meninas">
 					                     <a href="#${festagirls.nome}" class="btn btn-outline-info btn-sm js-scroll-trigger" role="button" aria-pressed="true">${festagirls.nome}</a>
 					                </div>
 					            </div>
-					            <div class="mostrar-temas-celular card border-primary col-4" >
-									<img class="card-img-top center " style="height: 100px; width: 100px;" src="images/festas/${festagirls.nome}/principal.jpg"  alt="${festagirls.nome}"/>
-					                <div class="card-footer-meninas" style="text-align:center">
-					                     <a href="#${festagirls.nome}" class="btn btn-outline-info btn-sm js-scroll-trigger" role="button" aria-pressed="true">
-					                     <font style="font-size: 8px;">${festagirls.nome}</font>
-					                     </a>
-					                </div>
 					            </div>
 					   </c:if>
 				   </c:forEach>

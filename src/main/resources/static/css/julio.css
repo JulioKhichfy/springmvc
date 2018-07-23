@@ -15,31 +15,6 @@ nav .borda7{
  border: 4px solid blue; 
 }
 
-div .borda-azul{
- border: 4px solid blue; 
- overflow:hidden;
-}
-
-div .borda-vermelha{
- border: 4px solid red; 
-}
-
-div .borda-preta{
- border: 4px solid black; 
-}
-
-div .borda-verde{
- border: 4px solid green; 
-}
-
-div .borda-branca{
- border: 4px solid white; 
-}
-
-div .borda-laranja{
- border: 4px solid orange; 
-}
-
 img.center {
     display: block;
     margin: 0 auto;
@@ -69,103 +44,6 @@ vtop{
 	
 }
 
-@media screen and (min-width: 980px) /* Desktop */ {
-  
-	.mostrar-temas-desktop{
-		display: inline;
-	}
-	.mostrar-temas-celular{
-		display: none; 
-	}
-	.somente-desktop-logotipo{
-		display:inline;
-	}
-	.somente-celular-texto-banner{
-		display:none;
-	}
-	.somente-desktop-texto-banner{
-		display:inline;
-	}
-	.header-para-celular{
-		display: none;
-	}
-	.header-para-desktop{
-		display: inline;
-	}
-	.moisaco-desktop{
-		display: inline;
-	}
-	.moisaco-mobile{
-		display: none;
-	}
-	
-
-}
-
-@media screen  and (max-width: 979px) /* Tablet */ {
-   
-	.mostrar-temas-desktop{
-		display: inline;
-	}
-	.mostrar-temas-celular{
-		display: none; 
-	}
-	.somente-desktop-logotipo{
-		display:inline;
-	}
-	.somente-celular-texto-banner{
-		display:none;
-	}
-	.somente-desktop-texto-banner{
-		display:inline;
-	}
-	.header-para-celular{
-		display: none;
-	}
-	.header-para-desktop{
-		display: inline;
-	}
-	.moisaco-desktop{
-		display: inline;
-	}
-	.moisaco-mobile{
-		display: none;
-	}
-	
-	
-}
-
-@media screen and (max-width: 576px) /* Mobile */ {
- 	
-	.mostrar-temas-desktop{
-		display: none;
-	}
-	.mostrar-temas-celular{
-		display: inline; 
-	}
-	.somente-desktop-logotipo{
-		display:none;
-	}
-	.somente-celular-texto-banner{
-		display:inline;
-	}
-	.somente-desktop-texto-banner{
-		display:none;
-	}
-	.header-para-celular{
-		display: inline;
-	}
-	.header-para-desktop{
-		display: none;
-	}
-	.moisaco-desktop{
-		display: none;
-	}
-	.moisaco-mobile{
-		display: inline;
-	}
-	
-}
 
 .btn-primary.custom-btn-menina {
 	background-color: #d50acb;
