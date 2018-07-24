@@ -45,6 +45,10 @@ div .borda-laranja{
 	.nomeTema{
 		font-family: 'Sofia';font-size: 16px;
 	}
+	.mosaicoFotos{
+		width: 100px; 
+		height: 100px;
+	}
 		
 	.somente-desktop-logotipo{
 		display:none;
@@ -88,7 +92,10 @@ div .borda-laranja{
 	.nomeTema{
 		font-family: 'Sofia';font-size: 18px;
 	}
-	
+	.mosaico-fotos{
+		width: 200px; 
+		height: 200px
+	}
 	
 	
 	
@@ -134,6 +141,10 @@ div .borda-laranja{
 	.nomeTema{
 		font-family: 'Sofia';font-size: 20px;
 	}
+	.mosaico-fotos{
+		width: 300px; 
+		height: 300px
+	}
 	
 	.somente-desktop-logotipo{
 		display:inline;
@@ -177,6 +188,10 @@ div .borda-laranja{
 	.nomeTema{
 		font-family: 'Sofia';font-size: 24px;
 	}
+	.mosaico-fotos{
+		width: 350px; 
+		height: 350px
+	}
 	
 	.somente-desktop-logotipo{
 		display:inline;
@@ -219,6 +234,10 @@ div .borda-laranja{
 	}
 	.nomeTema{
 		font-family: 'Sofia';font-size: 40px;
+	}
+	.mosaico-fotos img{
+		width: 400px; 
+		height: 400px
 	}
 	.somente-desktop-logotipo{
 		display:inline;

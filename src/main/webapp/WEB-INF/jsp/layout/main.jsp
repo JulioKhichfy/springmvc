@@ -44,11 +44,12 @@
 		<tiles:insertAttribute name="footer" />
 	</div>
 
-<script type="text/javascript" src='<spring:url value="/webjars/jquery/3.2.1/dist/jquery.min.js"/>'></script>
+<script type="text/javascript" src='<spring:url value="/webjars/jquery/3.3.1/dist/jquery.min.js"/>'></script>
+<script type="text/javascript" src='<spring:url value="/resources/js/jquery.fancybox.js"/>'></script>
 <script type="text/javascript" src='<spring:url value="/webjars/jquery.easing/1.4.1/jquery.easing.min.js"/>'></script>
 <script type="text/javascript" src='<spring:url value="/webjars/bootstrap/4.1.1/js/bootstrap.min.js"/>'></script>	
 <script type="text/javascript" src='<spring:url value="/resources/js/new-age.js"/>'></script>
-<script type="text/javascript" src='<spring:url value="/resources/js/jquery.fancybox.js"/>'></script>
+
 <!-- <script type="text/javascript" src='<spring:url value="/resources/js/lightbox.js"/>'></script> -->
 <!--<script type="text/javascript" src='<spring:url value="/resources/js/lightbox-plus-jquery.js"/>'></script>-->
 <script type="text/javascript" src='<spring:url value="/resources/js/custom.js"/>'></script>

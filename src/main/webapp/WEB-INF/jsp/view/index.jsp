@@ -165,44 +165,45 @@
 	</div>
 	
 	<c:set var="variavelFestas" value="${festas}" scope="request" />
+	
 	<section class="download bg-meninas" id="meninas">
 		<div class="container">
 			<div class="row">
-				<div class="col-12" style="text-align: center;" >
+				<div class="col-12" style="text-align: center;">
 					<span class="titleTemaMenina">Temas meninas</span>
 				</div>
 				<c:forEach var="festagirls" items="${variavelFestas}" varStatus="status">
 					<c:if test="${(festagirls.sexo eq 'F' || festagirls.sexo eq 'U')}">
-			            <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-6  align-middle" style="padding-bottom: 8px;" >
-				            <div class="card" >
-								<!--  classes de img : card-img-top center -->
+						<div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-6 align-middle" style="padding-bottom: 8px;">
+							<div class="card">
 								<img class="temas" src="images/festas/${festagirls.nome}/principal.jpg"  alt="${festagirls.nome}"/>
-				            </div>
-			                <a href="#${festagirls.nome}" class="js-scroll-trigger btn-primary btn-sm  " role="button" aria-pressed="true">
-				            	<font class="nomeTema">${festagirls.nome}</font>
-				            </a>
-			            </div>
-				   </c:if>
-			   </c:forEach>
-	        </div>  
-	    </div>
-    </section>
+							</div>
+							<a href="#${festagirls.nome}" class="js-scroll-trigger btn-primary btn-sm  " role="button" aria-pressed="true">
+								<font class="nomeTema">${festagirls.nome}</font>
+							</a>
+						</div>
+					</c:if>
+				</c:forEach>
+			</div>  
+		</div>
+	</section>
+    
 	<section class="download bg-meninos" id="meninos">
 		<div class="container">
 			<div class="row">
 				<div class="col-12" style="text-align: center;">
 					<span class="titleTemaMenino">Temas meninos</span>
 				</div>
-				<c:forEach var="festaboys" items="${variavelFestas}" varStatus="status" >
+				<c:forEach var="festaboys" items="${variavelFestas}" varStatus="status">
 					<c:if test="${festaboys.sexo eq 'M' || festaboys.sexo eq 'U'}">
-						 <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-6 align-middle" style="padding-bottom: 8px;" >
-							<div class="card" >
+					 	<div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-6 align-middle" style="padding-bottom: 8px;">
+							<div class="card">
 								<img class="temas" src="images/festas/${festaboys.nome}/principal.jpg"  alt="${festaboys.nome}"/>
 							</div>
-		                     <a href="#${festagirls.nome}" class="js-scroll-trigger btn-primary btn-sm " role="button" aria-pressed="true">
+		                     <a href="#${festagirls.nome}" class="js-scroll-trigger btn-primary btn-sm" role="button" aria-pressed="true">
 		                     	<font class="nomeTema">${festaboys.nome}</font>
 		                     </a>
-			           	</div>
+		           		</div>
 				    </c:if> 
 		        </c:forEach>
 	        </div>
@@ -210,34 +211,23 @@
     </section>
      
      <c:forEach var="festa" items="${variavelFestas}" varStatus="principal">
-    	<section class="features py-0 mt-5" id="${festa.nome}">
-   			<div class="container-fluid">
-				<div class="section-heading text-center mt-0">
-					<h2> Festa: ${festa.nome} </h2>
+    	<section class="features" id="${festa.nome}">
+   			<div class="container">
+					<span class="titleTemaMenina">Festa: ${festa.nome}</span>
 					<!-- Button to Open the Modal -->
 					  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" data-whatever="${festa.nome}">
 					    Enviar Interesse :) 
 					</button>
-				</div> 
-				<div class="row">
-					<div class="moisaco-desktop">
-						<div class='col-3'>
-							<c:forEach var="foto" items="${festa.tema.fotos}" varStatus="statusFotoAux">
-					            <a href='<spring:url value="/images/festas/${festa.nome}/${foto.nomeFoto}"/>' data-fancybox="gallery" data-caption="Caption #1">
-									<img style="width: 400px; height: 400px" src="images/festas/${festa.nome}/${foto.nomeFoto}" alt="" />
+				<div class="container">
+					<div class="row">
+						<c:forEach var="foto" items="${festa.tema.fotos}" varStatus="contador">
+							<div class='col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 text-center' style="padding-bottom: 8px; ">
+					            <a href='<spring:url value="/images/festas/${festa.nome}/${foto.nomeFoto}"/>' data-type="image" data-fancybox="image" data-caption="${foto.nomeFoto}" >
+									<img class="mosaicoFotos centered" src="images/festas/${festa.nome}/${foto.nomeFoto}" alt="${festa.nome}" />
 								</a>
-		            		</c:forEach>
-	            		</div>
+							</div>
+	            		</c:forEach>
 					</div>
-					<div class="moisaco-mobile">
-						<div class='col-sm-4'>
-							<c:forEach var="foto" items="${festa.tema.fotos}" varStatus="statusFotoAux">
-					            <a href='<spring:url value="/images/festas/${festa.nome}/${foto.nomeFoto}"/>' data-fancybox="gallery" data-caption="Caption #1">
-									<img style="width: 100px; height: 100px" src="images/festas/${festa.nome}/${foto.nomeFoto}" alt="" />
-								</a>
-		            		</c:forEach>
-	            		</div>
-		            </div>
 				</div>
 				<div class="row">
 					<div class="col-6">
