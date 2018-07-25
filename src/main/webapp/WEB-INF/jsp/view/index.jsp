@@ -221,7 +221,7 @@
 				<div class="container">
 					<div class="row">
 						<c:forEach var="foto" items="${festa.tema.fotos}" varStatus="contador">
-							<div class='col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 text-center' style="padding-bottom: 8px; ">
+							<div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 text-center" style="padding-bottom: 8px; ">
 					            <a href='<spring:url value="/images/festas/${festa.nome}/${foto.nomeFoto}"/>' data-type="image" data-fancybox="image" data-caption="${foto.nomeFoto}" >
 									<img class="mosaicoFotos centered" src="images/festas/${festa.nome}/${foto.nomeFoto}" alt="${festa.nome}" />
 								</a>

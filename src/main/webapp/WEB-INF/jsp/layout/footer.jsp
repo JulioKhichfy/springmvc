@@ -1,5 +1,5 @@
-<footer>
-	<div class="container">
+<footer class="rodape">
+	<div class="container rodape" >
 		<p>&amp;copy; Your Website 2018. All Rights Reserved.</p>
 		<ul class="list-inline">
 			<li class="list-inline-item"><a href="#">Privacy</a></li>

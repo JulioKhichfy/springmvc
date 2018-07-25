@@ -28,6 +28,13 @@ div .borda-laranja{
 
 @media screen and (max-width: 575.98px) {
 	
+	.rodape{
+		position: fixed;
+  		top: 100%;
+  		width: 100%;
+  		height:35%;	
+  		margin-top: -12.5em;
+	}
 	.card {
 		width: 100px;
 		height: 100px;
@@ -48,8 +55,7 @@ div .borda-laranja{
 	.mosaicoFotos{
 		width: 100px; 
 		height: 100px;
-	}
-		
+	} 
 	.somente-desktop-logotipo{
 		display:none;
 	}
