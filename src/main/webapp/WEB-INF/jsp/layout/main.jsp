@@ -53,6 +53,7 @@
 <!-- <script type="text/javascript" src='<spring:url value="/resources/js/lightbox.js"/>'></script> -->
 <!--<script type="text/javascript" src='<spring:url value="/resources/js/lightbox-plus-jquery.js"/>'></script>-->
 <script type="text/javascript" src='<spring:url value="/resources/js/custom.js"/>'></script>
+<script type="text/javascript" src='<spring:url value="/resources/js/marcar-interesses.js"/>'></script>
 
 		
 		

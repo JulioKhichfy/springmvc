@@ -213,21 +213,30 @@
      <c:forEach var="festa" items="${variavelFestas}" varStatus="principal">
     	<section class="features" id="${festa.nome}">
    			<div class="container">
-					<span class="titleTemaMenina">Festa: ${festa.nome}</span>
-					<!-- Button to Open the Modal -->
-					  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" data-whatever="${festa.nome}">
-					    Enviar Interesse :) 
-					</button>
-				<div class="container">
-					<div class="row">
-						<c:forEach var="foto" items="${festa.tema.fotos}" varStatus="contador">
-							<div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 text-center" style="padding-bottom: 8px; ">
-					            <a href='<spring:url value="/images/festas/${festa.nome}/${foto.nomeFoto}"/>' data-type="image" data-fancybox="image" data-caption="${foto.nomeFoto}" >
-									<img class="mosaicoFotos centered" src="images/festas/${festa.nome}/${foto.nomeFoto}" alt="${festa.nome}" />
-								</a>
-							</div>
-	            		</c:forEach>
+				<div class="row">
+					<div class="col-12">
+						<span class="titleTemaMenina">Festa: ${festa.nome}</span>
 					</div>
+				</div>
+			 	<div class="row">		
+			 		<div class="col">
+				      1 of 3
+			    	</div>
+				    <div class="col-5">
+				     <input type="checkbox" name="festasMarcadas[]" value="${festa.nome}">
+				    </div>
+				    <div class="col">
+				      3 of 3
+				    </div>
+				</div>
+				<div class="row">
+					<c:forEach var="foto" items="${festa.tema.fotos}" varStatus="contador">
+						<div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 text-center" style="padding-bottom: 8px; ">
+				            <a href='<spring:url value="/images/festas/${festa.nome}/${foto.nomeFoto}"/>' data-type="image" data-fancybox="image" data-caption="${foto.nomeFoto}" >
+								<img class="mosaicoFotos" src="images/festas/${festa.nome}/${foto.nomeFoto}" alt="${festa.nome}" />
+							</a>
+						</div>
+            		</c:forEach>
 				</div>
 				<div class="row">
 					<div class="col-6">
@@ -236,7 +245,7 @@
 						</p>
 					</div>
 				</div>
-			</div> <!-- <div class="container-fluid"> -->
+			</div><!-- <div class="container"> -->
 		</section>
 	</c:forEach> 
 	
