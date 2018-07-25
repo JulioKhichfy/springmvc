@@ -2,14 +2,22 @@
 	$(":checkbox").change(function () 
 	 {
 		var checkeds = new Array();
-		$("input[name='festasMarcadas[]']:checked").each(function ()
+		$("input[name='festasMarcadas[]']").each(function ()
 		{
 		   // valores inteiros usa-se parseInt
 		   //checkeds.push(parseInt($(this).val()));
 		   // string
-		   checkeds.push( $(this).val());
-		   
+			var sessao = $(this).val();
+			if ($(this).is(':checked')) {
+				checkeds.push( $(this).val());
+				 
+				$("#"+sessao).addClass("marcadoVerde");
+			}else{
+				
+				$("#"+sessao).removeClass("marcadoVerde");
+			}
 		});
+		
 		
 		var footerDiv = $("#festasSelecionadas");
 		
