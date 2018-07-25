@@ -84,6 +84,7 @@ public class WebConfig extends WebSecurityConfigurerAdapter implements WebMvcCon
 		.antMatchers("/login**").permitAll()
 		.antMatchers("/index**").permitAll()
 		.antMatchers("/loadbase**").permitAll()
+		.antMatchers("/pedido**").permitAll()
 		.and()
 			.authorizeRequests().anyRequest().hasAnyRole("ADMIN", "USER")
 				.antMatchers("/login**").permitAll()

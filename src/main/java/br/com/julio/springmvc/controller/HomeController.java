@@ -1,18 +1,25 @@
 package br.com.julio.springmvc.controller;
 
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import br.com.julio.springmvc.model.Festa;
-import br.com.julio.springmvc.model.Foto;
-import br.com.julio.springmvc.model.Tema;
+import br.com.julio.springmvc.model.Pedido;
 import br.com.julio.springmvc.repository.FestaRepository;
 
 @Controller
@@ -95,5 +102,12 @@ public class HomeController {
 	 * 
 	 * return mv; }
 	 */
+	@PostMapping(value = "/pedido")
+	   @ResponseBody
+	   public void saveEmployee(@ModelAttribute Pedido employee, BindingResult result) {
 
+	     
+	     System.out.println("cheguei"); 
+	     
+	}
 }
