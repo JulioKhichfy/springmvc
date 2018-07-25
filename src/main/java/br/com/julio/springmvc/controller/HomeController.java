@@ -4,8 +4,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
@@ -19,7 +20,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import br.com.julio.springmvc.model.Festa;
-import br.com.julio.springmvc.model.Pedido;
+import br.com.julio.springmvc.model.PedidoDTO;
 import br.com.julio.springmvc.repository.FestaRepository;
 
 @Controller
@@ -103,11 +104,30 @@ public class HomeController {
 	 * return mv; }
 	 */
 	@PostMapping(value = "/pedido")
-	   @ResponseBody
-	   public void saveEmployee(@ModelAttribute Pedido employee, BindingResult result) {
+	@ResponseBody
+	public void savePedido(@ModelAttribute @Valid PedidoDTO pedido, BindingResult result) {
 
 	     
 	     System.out.println("cheguei"); 
+	     
+	     if(result.hasErrors()){
+	         
+	         //Get error message
+	         Map<String, String> errors = result.getFieldErrors().stream()
+	               .collect(
+	                     Collectors.toMap(FieldError::getField, FieldError::getDefaultMessage)
+	                 );
+	         
+	         //respone.setValidated(false);
+	         //respone.setErrorMessages(errors);
+	      }else{
+	         // Implement business logic to save employee into database
+	         //..
+	         //respone.setValidated(true);
+	         //respone.setEmployee(employee);
+	    	  System.out.println("ok");
+	      }
+	     
 	     
 	}
 }

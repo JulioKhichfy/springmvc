@@ -12,14 +12,19 @@
 		});
 		
 		var footerDiv = $("#festasSelecionadas");
+		
 		footerDiv.empty();
+		
 		footerDiv.append("<h3><p>Festas que possuo interesse</p></h3>")
+		
 		for (var data in checkeds) {
-			  console.log(data + ' = ' + checkeds[data]);
-			  footerDiv.append("<h5><p>"+checkeds[data]+"</p></h5>");
-			  footerDiv.append("<input type='hidden' class='dadosForm' value='checkeds[data]'/>");
+		  footerDiv.append("<h5><p>"+checkeds[data]+"</p></h5>");
+		  footerDiv.append("<input type='hidden' class='dadosForm' name='festas' value="+checkeds[data] +"/>" );
 		}
 		
+		footerDiv.append("<input type='text' placeholder='Email' name='email' />");
+		footerDiv.append("<input type='text' placeholder='Nome' name='nome' />");
+		footerDiv.append("<input type='text' placeholder='Cel' name='cel' />");
 	 });
 	
 	 /*  Submit form using Ajax */
@@ -29,7 +34,7 @@
 	      e.preventDefault();
 	      
 	      //Remove all errors
-	      $('input').next().remove();
+	      //$('input').next().remove();
 	      
 	      $.post({
 	         url : 'pedido',
