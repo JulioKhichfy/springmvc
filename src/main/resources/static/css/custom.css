@@ -1,37 +1,13 @@
 body {
     background-color: lightblue;
 }
-div .borda-azul{
- border: 4px solid blue; 
- overflow:hidden;
-}
 
-div .borda-vermelha{
- border: 4px solid red; 
-}
-
-div .borda-preta{
- border: 4px solid black; 
-}
-
-div .borda-verde{
- border: 4px solid green; 
-}
-
-div .borda-branca{
- border: 4px solid white; 
-}
-
-div .borda-laranja{
- border: 4px solid orange; 
-}
-
-@media screen and (max-width: 575.98px) {
-	
-	.marcadoVerde{
+.marcadoVerde{
 		background-color: green;
 	}
 	
+
+@media screen and (max-width: 575.98px) {
 	.rodape{
 		position: fixed;
   		top: 100%;
@@ -50,46 +26,25 @@ div .borda-laranja{
 		font-family: 'Julee';font-size: 50px; text-align: center;
 	}
 	.temas {
-		width: 100px;
-		height: 100px;
+		width: 120px;
+		height: 120px;
 	}
 	.nomeTema{
 		font-family: 'Sofia';font-size: 16px;
 	}
-	.mosaicoFotos{
+	.mosaico-fotos{
 		width: 100px; 
 		height: 100px;
-	} 
-	.somente-desktop-logotipo{
-		display:none;
 	}
-	.somente-celular-texto-banner{
-		display:inline;
+	.header-responsivo img{
+		width: 100px; 
+		height: 70px;
 	}
-	.somente-desktop-texto-banner{
-		display:none;
-	}
-	.header-para-celular{
-		display: inline;
-	}
-	.header-para-desktop{
-		display: none;
-	}
-	.moisaco-desktop{
-		display: none;
-	}
-	.moisaco-mobile{
-		display: inline;
-	}
-	
 }
 
 
 @media screen and (min-width: 576px) and (max-width: 767.98px) {
-	.marcadoVerde{
-		background-color: green;
-	}
-	
+		
 	.rodape{
 		position: fixed;
   		top: 100%;
@@ -99,7 +54,7 @@ div .borda-laranja{
 	}
 	
 	.card{
-		width: 200px;
+		width: 150px;
 	}
 	.titleTemaMenina{
 		font-family: 'Griffy';font-size: 60px; text-align: center;
@@ -108,46 +63,25 @@ div .borda-laranja{
 		font-family: 'Julee';font-size: 60px; text-align: center;
 	}
 	.temas {
-		width: 200px;
-		height: 200px;
+		width: 150px;
+		height: 150px;
 	}
 	.nomeTema{
 		font-family: 'Sofia';font-size: 18px;
 	}
 	.mosaico-fotos{
-		width: 200px; 
-		height: 200px
+		width: 130px; 
+		height:130px;
 	}
-	.somente-desktop-logotipo{
-		display:none;
-	}
-	.somente-celular-texto-banner{
-		display:inline;
-	}
-	.somente-desktop-texto-banner{
-		display:none;
-	}
-	.header-para-celular{
-		display: inline;
-	}
-	.header-para-desktop{
-		display: none;
-	}
-	.moisaco-desktop{
-		display: none;
-	}
-	.moisaco-mobile{
-		display: inline;
+	.header-responsivo img{
+		width: 110px; 
+		height:80px;
 	}
 	
 }
 
 
 @media screen and (min-width: 768px) and (max-width: 991.98px) {
-	.marcadoVerde{
-		background-color: green;
-	}
-	
 	.rodape{
 		position: fixed;
   		top: 100%;
@@ -157,11 +91,11 @@ div .borda-laranja{
 	}
 	
 	.temas {
-		width: 300px;
-		height: 300px;
+		width: 160px;
+		height: 160px;
 	}
 	.card{
-		width: 300px;
+		width: 160px;
 	}
 	.titleTemaMenina{
 		font-family: 'Griffy';font-size: 70px; text-align: center;
@@ -173,39 +107,17 @@ div .borda-laranja{
 		font-family: 'Sofia';font-size: 20px;
 	}
 	.mosaico-fotos{
-		width: 300px; 
-		height: 300px
+		width: 150px; 
+		height:150px;
 	}
-	
-	.somente-desktop-logotipo{
-		display:inline;
+	.header-responsivo img{
+		width: 110px; 
+		height: 80px;
 	}
-	.somente-celular-texto-banner{
-		display:none;
-	}
-	.somente-desktop-texto-banner{
-		display:inline;
-	}
-	.header-para-celular{
-		display: none;
-	}
-	.header-para-desktop{
-		display: inline;
-	}
-	.moisaco-desktop{
-		display: inline;
-	}
-	.moisaco-mobile{
-		display: none;
-	}
-
 }
 
 
 @media screen and (min-width: 992px) and (max-width: 1199.98px) {
-	.marcadoVerde{
-		background-color: green;
-	}
 	
 	.rodape{
 		position: fixed;
@@ -216,8 +128,8 @@ div .borda-laranja{
 	}
 	
 	.temas {
-		width: 350px;
-		height: 350px;
+		width: 200px;
+		height:200px;
 	}
 	.card{
 		width: 350px;
@@ -232,41 +144,17 @@ div .borda-laranja{
 		font-family: 'Sofia';font-size: 24px;
 	}
 	.mosaico-fotos{
-		width: 350px; 
-		height: 350px
+		width: 160px; 
+		height:160px;
 	}
-	
-	.somente-desktop-logotipo{
-		display:inline;
+	.header-responsivo img{
+		width: 140px; 
+		height:100px;
 	}
-	.somente-celular-texto-banner{
-		display:none;
-	}
-	.somente-desktop-texto-banner{
-		display:inline;
-	}
-	.header-para-celular{
-		display: none;
-	}
-	.header-para-desktop{
-		display: inline;
-	}
-	.moisaco-desktop{
-		display: inline;
-	}
-	.moisaco-mobile{
-		display: none;
-	}
-	
-
 }
 
 @media screen and (min-width: 1200px) {
-	
-	.marcadoVerde{
-		background-color: green;
-	}
-	
+
 	.rodape{
 		position: fixed;
   		top: 100%;
@@ -276,8 +164,8 @@ div .borda-laranja{
 	}
 	
 	.temas {
-		width: 400px;
-		height: 400px;
+		width: 230px;
+		height:230px;
 	}
 	.card{
 		width: 400px;
@@ -291,33 +179,14 @@ div .borda-laranja{
 	.nomeTema{
 		font-family: 'Sofia';font-size: 40px;
 	}
-	.mosaico-fotos img{
-		width: 400px; 
-		height: 400px
+	.mosaico-fotos{
+		width: 190px; 
+		height: 190px;
 	}
-	.somente-desktop-logotipo{
-		display:inline;
+	.header-responsivo img{
+		width: 150px; 
+		height:110px;
 	}
-	.somente-celular-texto-banner{
-		display:none;
-	}
-	.somente-desktop-texto-banner{
-		display:inline;
-	}
-	.header-para-celular{
-		display: none;
-	}
-	.header-para-desktop{
-		display: inline;
-	}
-	.moisaco-desktop{
-		display: inline;
-	}
-	.moisaco-mobile{
-		display: none;
-	}
-	
-
 }
 
 /*  @font-face {

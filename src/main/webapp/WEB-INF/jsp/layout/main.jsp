@@ -35,10 +35,10 @@
 <link href='<spring:url value="/resources/css/custom.css"/>' rel="stylesheet" />
 </head>
 
-<body id="page-top">
+<body>
 <c:set var="path" value="${pageContext.request.contextPath}" scope="request" />
 
-	<div>
+	<div class="containerr-fluid">
 		<tiles:insertAttribute name="header" />
 		<tiles:insertAttribute name="body" />
 		<tiles:insertAttribute name="footer" />
