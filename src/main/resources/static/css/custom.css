@@ -36,8 +36,8 @@ div .borda-laranja{
 		position: fixed;
   		top: 100%;
   		width: 100%;
-  		height:35%;	
-  		margin-top: -12.5em;
+  		height:25%;	
+  		margin-top: -6.5em;
 	}
 	.card {
 		width: 100px;
@@ -86,6 +86,18 @@ div .borda-laranja{
 
 
 @media screen and (min-width: 576px) and (max-width: 767.98px) {
+	.marcadoVerde{
+		background-color: green;
+	}
+	
+	.rodape{
+		position: fixed;
+  		top: 100%;
+  		width: 100%;
+  		height:25%;	
+  		margin-top: -6.5em;
+	}
+	
 	.card{
 		width: 200px;
 	}
@@ -106,9 +118,6 @@ div .borda-laranja{
 		width: 200px; 
 		height: 200px
 	}
-	
-	
-	
 	.somente-desktop-logotipo{
 		display:none;
 	}
@@ -135,6 +144,18 @@ div .borda-laranja{
 
 
 @media screen and (min-width: 768px) and (max-width: 991.98px) {
+	.marcadoVerde{
+		background-color: green;
+	}
+	
+	.rodape{
+		position: fixed;
+  		top: 100%;
+  		width: 100%;
+  		height:25%;	
+  		margin-top: -6.5em;
+	}
+	
 	.temas {
 		width: 300px;
 		height: 300px;
@@ -182,6 +203,18 @@ div .borda-laranja{
 
 
 @media screen and (min-width: 992px) and (max-width: 1199.98px) {
+	.marcadoVerde{
+		background-color: green;
+	}
+	
+	.rodape{
+		position: fixed;
+  		top: 100%;
+  		width: 100%;
+  		height:25%;	
+  		margin-top: -6.5em;
+	}
+	
 	.temas {
 		width: 350px;
 		height: 350px;
@@ -229,6 +262,19 @@ div .borda-laranja{
 }
 
 @media screen and (min-width: 1200px) {
+	
+	.marcadoVerde{
+		background-color: green;
+	}
+	
+	.rodape{
+		position: fixed;
+  		top: 100%;
+  		width: 100%;
+  		height:25%;	
+  		margin-top: -6.5em;
+	}
+	
 	.temas {
 		width: 400px;
 		height: 400px;
