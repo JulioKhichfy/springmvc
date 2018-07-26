@@ -20,19 +20,30 @@
 		
 		
 		var footerDiv = $("#festasSelecionadas");
+		var contadorDiv = $("#contador-interesses");
+		var formDiv = $("#campos-form-interesses");
+		var botaoDiv = $("#botao-enviar-interesses");
 		
 		footerDiv.empty();
-		
-		footerDiv.append("<h3><p>Festas que possuo interesse</p></h3>")
+		contadorDiv.empty();
+		formDiv.empty();
+		botaoDiv.empty();
 		
 		for (var data in checkeds) {
-		  footerDiv.append("<h5><p>"+checkeds[data]+"</p></h5>");
-		  footerDiv.append("<input type='hidden' class='dadosForm' name='festas' value="+checkeds[data] +"/>" );
+		  /*footerDiv.append("<h5><p>"+checkeds[data]+"</p></h5>");*/
+			
+			footerDiv.append("<input type='hidden' class='dadosForm' name='festas' value="+checkeds[data] +"/>" );
 		}
+		contadorDiv.append("<h1>"+checkeds.length+"</h1>");
+		formDiv.append("<input type='text' placeholder='Email' name='email' />");
+		formDiv.append("<input type='text' placeholder='Nome' name='nome' />");
+		formDiv.append("<input type='text' placeholder='Cel' name='cel' />");
 		
-		footerDiv.append("<input type='text' placeholder='Email' name='email' />");
-		footerDiv.append("<input type='text' placeholder='Nome' name='nome' />");
-		footerDiv.append("<input type='text' placeholder='Cel' name='cel' />");
+		if(checkeds.length == 1){
+			botaoDiv.append("<button type='submit' id='enviarPedido'>Enviar Interesse</button>");
+		}else{
+			botaoDiv.append("<button type='submit' id='enviarPedido'>Enviar Interesses</button>");
+		}
 	 });
 	
 	 /*  Submit form using Ajax */
