@@ -1,56 +1,52 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
-	
-	<div class="header-responsivo">
-		<header class="masthead" style="padding-top: 120px;" >
-		 	<p style="text-align: center;">Festas Infantis, 15 anos e datas especiais</p>
-						
-			<p style="text-align: left;">Navegue pelos temas</p>
-		    
-		    <p style="text-align: center;">Selecione um ou mais temas e clique em "enviar interesse".
-			    Iremos responder como você desejar:Email, Celular ou Whatsapp.</p>
-		   	<div class="container">
-		   	
-			   	<div class="row justify-content-start">
-					<div class="col-4 col-sm-4 col-md-4 col-lg-2 col-xl-2 align-middle">
-						<div class="view overlay rounded z-depth-1">
-							<a href="#meninas" class="js-scroll-trigger">
-								<img src="images/masterhead/meninastemasbtn.jpg" class="img-fluid" alt="Meninas ;)" />
-							</a>
-						</div>
-					</div>
-					<div class="col-4 col-sm-4 col-md-4 col-lg-2 col-xl-2 align-middle">
-						<div class="view overlay rounded z-depth-1">
-							<a href="#meninos" class="js-scroll-trigger">
-								<img src="images/masterhead/meninostemabtn.jpg" class="img-fluid"  alt="Meninos ;)" />
-							</a>
-						</div>
-						
-					</div>
-					<div class="col-4 col-sm-4 col-md-4 col-lg-2 col-xl-2 align-middle">
-						<div class="view overlay rounded z-depth-1">
-							<a href="#adultos" class="js-scroll-trigger">
-								<img src="images/masterhead/adultostemabtn.jpg" class="img-fluid"  alt="adultos" />
-							</a>
-						</div>
-						
-					</div>
-					<div class="w-100"></div>
-					<div class="col-4 col-sm-4 col-md-4 col-lg-2 col-xl-2 align-middle" style="text-align:center"><a href="#meninas" class="btn btn-primary custom-btn-menina btn-sm js-scroll-trigger">Elas ;)</a></div>
-					<div class="col-4 col-sm-4 col-md-4 col-lg-2 col-xl-2 align-middle" style="text-align:center"><a href="#meninos" class="btn btn-primary custom-btn-menino btn-sm js-scroll-trigger">Eles ;) </a></div>
-					<div class="col-4 col-sm-4 col-md-4 col-lg-2 col-xl-2 align-middle" style="text-align:center"><a href="#adultos" class="btn btn-primary custom-btn-outros btn-sm js-scroll-trigger">Outros</a></div>
-				
-				</div>
+
+		<header class="masthead">
+		
+			<div class="header-content">
+			 	<h1>Festas Infantis, 15 anos e datas especiais</h1>
+							
+				<p style="text-align: left;">Navegue pelos temas</p>
+			    
+			    <p style="text-align: center;">Selecione um ou mais temas e clique em "enviar interesse".
+				    Iremos responder como você desejar:Email, Celular ou Whatsapp.</p>
 			</div>
+		   	<div class="row justify-content-start">
+				<div class="col-4 col-sm-4 col-md-4 col-lg-2 col-xl-2 align-middle">
+					<div class="view overlay rounded z-depth-1">
+						<a href="#meninas" class="js-scroll-trigger">
+							<img src="images/masterhead/meninastemasbtn.jpg" class="img-fluid" alt="Meninas ;)" />
+						</a>
+					</div>
+				</div>
+				<div class="col-4 col-sm-4 col-md-4 col-lg-3 col-xl-3 align-middle">
+					<div class="view overlay rounded z-depth-1">
+						<a href="#meninos" class="js-scroll-trigger">
+							<img src="images/masterhead/meninostemabtn.jpg" class="img-fluid"  alt="Meninos ;)" />
+						</a>
+					</div>
+					
+				</div>
+				<div class="col-4 col-sm-4 col-md-4 col-lg-3 col-xl-3 align-middle">
+					<div class="view overlay rounded z-depth-1">
+						<a href="#adultos" class="js-scroll-trigger">
+							<img src="images/masterhead/adultostemabtn.jpg" class="img-fluid"  alt="adultos" />
+						</a>
+					</div>
+				</div>
+				
+				<div class="col-4 col-sm-4 col-md-4 col-lg-2 col-xl-2 align-middle" ><a href="#meninas" class="btn btn-primary custom-btn-menina btn-sm js-scroll-trigger">Elas ;)</a></div>
+				<div class="col-4 col-sm-4 col-md-4 col-lg-2 col-xl-2 align-middle" ><a href="#meninos" class="btn btn-primary custom-btn-menino btn-sm js-scroll-trigger">Eles ;) </a></div>
+				<div class="col-4 col-sm-4 col-md-4 col-lg-2 col-xl-2 align-middle" ><a href="#adultos" class="btn btn-primary custom-btn-outros btn-sm js-scroll-trigger">Outros</a></div>
+			</div>
+		
 		    <p>Caso esteja planejando personalizar seu evento/festa, fale diretamente com a decoradora.</p>
 			<a href="#tema-personalizado" class="btn btn-outline-dark btn-sm js-scroll-trigger">Escrever</a>
 		</header>
-	</div>
-	
 	<c:set var="variavelFestas" value="${festas}" scope="request" />
 	
-	<section class="download bg-meninas" id="meninas">
+	<section class="apresentacao-temas bg-meninas" id="meninas">
 		<div class="container">
 			<div class="row">
 				<div class="col-12" style="text-align: center;">
@@ -72,7 +68,7 @@
 		</div>
 	</section>
     
-	<section class="download bg-meninos" id="meninos">
+	<section class="apresentacao-temas bg-meninos" id="meninos">
 		<div class="container">
 			<div class="row">
 				<div class="col-12" style="text-align: center;">

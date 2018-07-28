@@ -1,14 +1,15 @@
-<!-- Navigation -->
+
 	<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-      <div class="container">
+     <!-- <div class="container"> -->
         <div class="row">
+		    <div class="col-6">
+	       		<a class="navbar-brand imagem-tam js-scroll-trigger" href="#page-top">
+	        		<img src="images/arabesco-icon.png"/>
+	        	</a>
+	        </div>
 	        
-       	<a class="navbar-brand js-scroll-trigger" href="#page-top">
-        	<img src="images/arabesco-icon.png"/>
-        	<img  src="images/banner-mobile.png"/>
-       	</a>
-	       	
-        </div>
+	    </div>	
+
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 				Menu<i class="fa fa-bars"></i>
 		</button> 
@@ -31,5 +32,5 @@
             </li>
           </ul>
         </div>
-      </div>
+      <!-- </div> -->
     </nav>

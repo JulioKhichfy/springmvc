@@ -1,6 +1,6 @@
 <footer class="rodape">
 <form action="pedido" method="post" name="pedidoForm">
-	<div class="container-fluid rodape" >
+	<div class="rodape" >
 		<div id="festasSelecionadas"> </div>
 		
 		<div class="row">

@@ -6,8 +6,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<!-- shrink-to-fit=no -->
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 <link href='<spring:url value="/resources/css/reset.css"/>' rel="stylesheet" />
 <link href='<spring:url value="/webjars/bootstrap/4.1.1/css/bootstrap.min.css"/>' rel="stylesheet" />
@@ -38,7 +38,7 @@
 <body>
 <c:set var="path" value="${pageContext.request.contextPath}" scope="request" />
 
-	<div class="containerr-fluid">
+	<div class="container">
 		<tiles:insertAttribute name="header" />
 		<tiles:insertAttribute name="body" />
 		<tiles:insertAttribute name="footer" />
