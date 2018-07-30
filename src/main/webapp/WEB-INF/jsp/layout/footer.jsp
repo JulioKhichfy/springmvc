@@ -1,6 +1,6 @@
 <footer class="rodape">
-<form action="pedido" method="post" name="pedidoForm">
-	<div class="rodape" >
+	<form action="pedido" method="post" name="pedidoForm">
+	
 		<div id="festasSelecionadas"> </div>
 		
 		<div class="row">
@@ -15,9 +15,6 @@
 				<div id="botao-enviar-interesses"></div>
 			</div>
 		</div>
-		
-		
-	</div>
 </form>
 
 </footer>

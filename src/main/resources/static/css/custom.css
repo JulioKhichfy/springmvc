@@ -57,9 +57,9 @@ body {
 #mainNav .navbar-nav > li > a:hover,
 #mainNav .navbar-nav > li > a:focus:hover {
   color: #fdcc52;
-}
+}*/
 
-@media (min-width: 992px) {
+/*@media (min-width: 992px) {
   #mainNav {
     border-color: transparent;
     background-color: transparent;
@@ -116,8 +116,8 @@ header.masthead {
 }
 
 header.masthead .header-content {
-  max-width: 500px;
-  margin-bottom: 100px;
+  /*max-width: 500px;*/
+ /* margin-bottom: 100px;*/
   text-align: center;
 }
 
@@ -125,12 +125,7 @@ header.masthead .header-content h1 {
   font-size: 30px;
 }
 
-section.apresentacao-temas{
-  width:100vw;
-  height:83vh;
-  position: relative;
-  /*padding: 20px 0;*/
-}
+
 .bg-meninos {
 	background: #05cbf5;
 	background: -webkit-linear-gradient(#9decfd, #05cbf5);
@@ -144,29 +139,29 @@ section.apresentacao-temas{
 }
 
 footer {
-  padding: 25px 0;
+  /*padding: 25px 0;*/
   text-align: center;
   color: rgba(255, 255, 255, 0.3);
   background-color: #222222;
 }
 
-footer p {
+/*footer p {
   font-size: 12px;
   margin: 0;
 }
-
-footer ul {
+*/
+/*footer ul {
   margin-bottom: 0;
-}
+}*/
 
-footer ul li a {
+/*footer ul li a {
   font-size: 12px;
   color: rgba(255, 255, 255, 0.3);
 }
 
 footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li a.active {
   text-decoration: none;
-}
+}*/
 
 .marcadoVerde{
 		background-color: green;
@@ -180,10 +175,10 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 	   background-color: white;
 	   
 	  }
-	  #mainNav .imagem-tam{
+	  /*#mainNav .imagem-tam{
 	  	width: auto;
 	  	height: auto;
-	  }
+	  }*/
 	  #mainNav .navbar-brand {
 	    color: fade(white, 70%);
 	  }
@@ -216,6 +211,18 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 	  #mainNav.navbar-shrink .navbar-nav > li > a:focus:hover {
 	    color: #fdcc52;
 	  }
+	  section.apresentacao-temas{
+		  width:100%;
+		  height:83%;
+		  /*position: relative;*/
+		  /*padding: 20px 0;*/
+	  
+	  }
+	  section.features{
+	  	width:100%;
+		  height:65%;
+		  padding-bottom: 35%
+	  }
 	
 	.temas {
 		width: 60px;
@@ -223,7 +230,7 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 	}
 	.rodape{
 		position: fixed;
-  		bottom: 0%;
+  		bottom: 2%;
   		width: 100%;
   		height:35%;	
 	}

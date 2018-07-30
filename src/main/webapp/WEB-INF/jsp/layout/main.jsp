@@ -36,7 +36,7 @@
 </head>
 
 <body>
-<c:set var="path" value="${pageContext.request.contextPath}" scope="request" />
+<!--<c:set var="path" value="${pageContext.request.contextPath}" scope="request" />-->
 
 	<div class="container">
 		<tiles:insertAttribute name="header" />

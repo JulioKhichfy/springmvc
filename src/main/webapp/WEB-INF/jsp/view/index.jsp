@@ -128,7 +128,7 @@
 		</section>
 	</c:forEach> 
 	
-	<section class="cta">
+	<!--<section class="cta">
 		<div class="cta-content">
 			<div class="container">
 				<h2>
@@ -139,9 +139,9 @@
 			</div>
 		</div>
 		<div class="overlay"></div>
-	</section>
+	</section>-->
 
-	<section class="contact bg-primary" id="contact">
+	<!--<section class="contact bg-primary" id="contact">
 		<div class="container">
 			<h2>
 				We <i class="fa fa-heart"></i> new friends!
@@ -158,4 +158,4 @@
 				</a></li>
 			</ul>
 		</div>
-	</section>
+	</section>-->
