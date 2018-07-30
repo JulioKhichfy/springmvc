@@ -1,8 +1,8 @@
 body {
 	width: 100%;
-  	height: 100%;
-    background-color: lightblue;
-    font-family: 'Muli', 'Helvetica', 'Arial', 'sans-serif';
+	height: 100%;
+	background-color: lightblue;
+	font-family: 'Muli', 'Helvetica', 'Arial', 'sans-serif';
 }
 
 /*#mainNav {
@@ -97,11 +97,6 @@ body {
     color: #fdcc52;
   }
 }*/
-
-
-
-
-
 header.masthead {
 	position: relative;
 	width: 100%;
@@ -110,21 +105,21 @@ header.masthead {
 	padding-bottom: 17%;
 	color: #fff;
 	background: url('#{resources["images/bg-pattern.png"]}'), #00bcd4;
-	background: url('#{resources["images/bg-pattern.png"]}'), -webkit-linear-gradient(to left, #00bcd4, #00bcd4);
+	background: url('#{resources["images/bg-pattern.png"]}'),
+		-webkit-linear-gradient(to left, #00bcd4, #00bcd4);
 	background: url('#{resources["images/bg-pattern.png"]}'),
 		linear-gradient(to left, #fdcc52, #00bcd4)
 }
 
 header.masthead .header-content {
-  /*max-width: 500px;*/
- /* margin-bottom: 100px;*/
-  text-align: center;
+	/*max-width: 500px;*/
+	/* margin-bottom: 100px;*/
+	text-align: center;
 }
 
 header.masthead .header-content h1 {
-  font-size: 30px;
+	font-size: 30px;
 }
-
 
 .bg-meninos {
 	background: #05cbf5;
@@ -139,10 +134,10 @@ header.masthead .header-content h1 {
 }
 
 footer {
-  /*padding: 25px 0;*/
-  text-align: center;
-  color: rgba(255, 255, 255, 0.3);
-  background-color: #222222;
+	/*padding: 25px 0;*/
+	text-align: center;
+	color: rgba(255, 255, 255, 0.3);
+	background-color: #222222;
 }
 
 /*footer p {
@@ -162,89 +157,118 @@ footer {
 footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li a.active {
   text-decoration: none;
 }*/
+.marcadoVerde {
+	background-color: green;
+}
 
-.marcadoVerde{
-		background-color: green;
+@media screen and (min-width: 100.00px) and (max-width: 239.98px) {
+	.stuck {
+		position: fixed;
+		top: 20px;
+		/*left: 10px;*/
+		bottom: 20px;
+		width: 239.98px;
+		overflow-y: scroll;
+		max-height: 80%;
 	}
-	
+	.rodape {
+		position: fixed;
+		/*padding: 5em;*/
+		left: 50%;
+		height: 20%;
+		width: 239.98px;
+		bottom: -5%;
+		transform: translate(-50%, -50%);
+	}
+}
 
-@media screen and (min-width: 240.00px) and (max-width: 339.98px){
-	
+@media screen and (min-width: 240.00px) and (max-width: 339.98px) {
+	.stuck {
+		position: fixed;
+		top: 20px;
+		/*left: 10px;*/
+		bottom: 20px;
+		width: 339.98px;
+		overflow-y: scroll;
+		max-height: 80%;
+	}
 	#mainNav {
-	   border-color: white;
-	   background-color: white;
-	   
-	  }
-	  /*#mainNav .imagem-tam{
+		border-color: white;
+		background-color: white;
+	}
+	/*#mainNav .imagem-tam{
 	  	width: auto;
 	  	height: auto;
 	  }*/
-	  #mainNav .navbar-brand {
-	    color: fade(white, 70%);
-	  }
-	  #mainNav .navbar-brand:hover, #mainNav .navbar-brand:focus {
-	    color: white;
-	  }
-	  #mainNav .navbar-nav > li > a,
-	  #mainNav .navbar-nav > li > a:focus {
-	    color: rgba(255, 255, 255, 0.7);
-	  }
-	  #mainNav .navbar-nav > li > a:hover,
-	  #mainNav .navbar-nav > li > a:focus:hover {
-	    color: white;
-	  }
-	  #mainNav.navbar-shrink {
-	    border-color: rgba(34, 34, 34, 0.1);
-	    background-color: white;
-	  }
-	  #mainNav.navbar-shrink .navbar-brand {
-	    color: #222222;
-	  }
-	  #mainNav.navbar-shrink .navbar-brand:hover, #mainNav.navbar-shrink .navbar-brand:focus {
-	    color: #fdcc52;
-	  }
-	  #mainNav.navbar-shrink .navbar-nav > li > a,
-	  #mainNav.navbar-shrink .navbar-nav > li > a:focus {
-	    color: #222222;
-	  }
-	  #mainNav.navbar-shrink .navbar-nav > li > a:hover,
-	  #mainNav.navbar-shrink .navbar-nav > li > a:focus:hover {
-	    color: #fdcc52;
-	  }
-	  section.apresentacao-temas{
-		  width:100%;
-		  height:83%;
-		  /*position: relative;*/
-		  /*padding: 20px 0;*/
-	  
-	  }
-	  section.features{
-	  	width:100%;
-		  height:65%;
-		  padding-bottom: 35%
-	  }
-	
+	#mainNav .navbar-brand {
+		color: fade(white, 70%);
+	}
+	#mainNav .navbar-brand:hover, #mainNav .navbar-brand:focus {
+		color: white;
+	}
+	#mainNav .navbar-nav>li>a, #mainNav .navbar-nav>li>a:focus {
+		color: rgba(255, 255, 255, 0.7);
+	}
+	#mainNav .navbar-nav>li>a:hover, #mainNav .navbar-nav>li>a:focus:hover {
+		color: white;
+	}
+	#mainNav.navbar-shrink {
+		border-color: rgba(34, 34, 34, 0.1);
+		background-color: white;
+	}
+	#mainNav.navbar-shrink .navbar-brand {
+		color: #222222;
+	}
+	#mainNav.navbar-shrink .navbar-brand:hover, #mainNav.navbar-shrink .navbar-brand:focus
+		{
+		color: #fdcc52;
+	}
+	#mainNav.navbar-shrink .navbar-nav>li>a, #mainNav.navbar-shrink .navbar-nav>li>a:focus
+		{
+		color: #222222;
+	}
+	#mainNav.navbar-shrink .navbar-nav>li>a:hover, #mainNav.navbar-shrink .navbar-nav>li>a:focus:hover
+		{
+		color: #fdcc52;
+	}
+	section.apresentacao-temas {
+		width: 100%;
+		height: 83%;
+		/*position: relative;*/
+		/*padding: 20px 0;*/
+	}
+	section.features {
+		width: 100%;
+		height: 65%;
+		padding-bottom: 35%
+	}
 	.temas {
 		width: 60px;
 		height: 60px;
 	}
-	.rodape{
+	.rodape {
 		position: fixed;
-  		bottom: 2%;
-  		width: 100%;
-  		height:35%;	
+		/*padding: 5em;*/
+		left: 50%;
+		height: 20%;
+		width: 339.98px;
+		bottom: -5%;
+		transform: translate(-50%, -50%);
 	}
-	.titleTemaMenina{
-		font-family: 'Griffy';font-size: 10px;
+	.titleTemaMenina {
+		font-family: 'Griffy';
+		font-size: 10px;
 	}
-	.titleTemaMenino{
-		font-family: 'Julee';font-size: 10px;
+	.titleTemaMenino {
+		font-family: 'Julee';
+		font-size: 10px;
 	}
-	.nomeTema{
-		font-family: 'Sofia';font-size: 12px;
+	.nomeTema {
+		font-family: 'Sofia';
+		font-size: 12px;
 	}
-	.mosaico-fotos{
-		width: 60px; 
+	.mosaico-fotos {
+		width: 60px;
 		height: 60px;
 	}
 	/*.header-responsivo img{
@@ -252,34 +276,48 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 		height: 60px;
 	}*/
 }
-	
 
 @media screen and (min-width: 340.00px) and (max-width: 575.98px) {
-	.rodape{
+	.stuck {
 		position: fixed;
-  		bottom: 0%;
-  		width: 100%;
-  		height:17%;	
+		top: 20px;
+		/*left: 10px;*/
+		bottom: 20px;
+		width: 575.98px;
+		overflow-y: scroll;
+		max-height: 80%;
+	}
+	.rodape {
+		position: fixed;
+		/*padding: 5em;*/
+		left: 50%;
+		height: 15%;
+		width: 575px;
+		bottom: -5%;
+		transform: translate(-50%, -50%);
 	}
 	/*.card {
 		width: 100px;
 		height: 100px;
 	}*/
-	.titleTemaMenina{
-		font-family: 'Griffy';font-size: 20px;
+	.titleTemaMenina {
+		font-family: 'Griffy';
+		font-size: 20px;
 	}
-	.titleTemaMenino{
-		font-family: 'Julee';font-size: 20px;
+	.titleTemaMenino {
+		font-family: 'Julee';
+		font-size: 20px;
 	}
 	.temas {
 		width: 100px;
 		height: 100px;
 	}
-	.nomeTema{
-		font-family: 'Sofia';font-size: 16px;
+	.nomeTema {
+		font-family: 'Sofia';
+		font-size: 16px;
 	}
-	.mosaico-fotos{
-		width: 100px; 
+	.mosaico-fotos {
+		width: 100px;
 		height: 100px;
 	}
 	/*.header-responsivo img{
@@ -288,71 +326,100 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 	}*/
 }
 
-
 @media screen and (min-width: 576px) and (max-width: 767.98px) {
-		
-	.rodape{
+	.stuck {
 		position: fixed;
-  			bottom: 0%;
-  		width: 100%;
-  		height:17%;	
+		top: 20px;
+		/*left: 10px;*/
+		bottom: 20px;
+		width: 767.98px;
+		overflow-y: scroll;
+		max-height: 80%;
 	}
-	
-	.card{
+	.rodape {
+		position: fixed;
+		/*padding: 5em;*/
+		left: 50%;
+		height: 15%;
+		width: 767.98px;
+		bottom: -5%;
+		transform: translate(-50%, -50%);
+	}
+	.card {
 		width: 150px;
 	}
-	.titleTemaMenina{
-		font-family: 'Griffy';font-size: 60px; text-align: center;
+	.titleTemaMenina {
+		font-family: 'Griffy';
+		font-size: 60px;
+		text-align: center;
 	}
-	.titleTemaMenino{
-		font-family: 'Julee';font-size: 60px; text-align: center;
+	.titleTemaMenino {
+		font-family: 'Julee';
+		font-size: 60px;
+		text-align: center;
 	}
 	.temas {
 		width: 150px;
 		height: 150px;
 	}
-	.nomeTema{
-		font-family: 'Sofia';font-size: 18px;
+	.nomeTema {
+		font-family: 'Sofia';
+		font-size: 18px;
 	}
-	.mosaico-fotos{
-		width: 130px; 
-		height:130px;
+	.mosaico-fotos {
+		width: 130px;
+		height: 130px;
 	}
 	/*.header-responsivo img{
 		width: 110px; 
 		height:80px;
 	}*/
-	
 }
 
-
 @media screen and (min-width: 768px) and (max-width: 991.98px) {
-	.rodape{
+	.stuck {
 		position: fixed;
-  			bottom: 0%;
-  		width: 100%;
-  		height:17%;	
+		top: 20px;
+		/*left: 10px;*/
+		bottom: 20px;
+		width: 991.98px;
+		overflow-y: scroll;
+		max-height: 80%;
 	}
 	
+	.rodape {
+		position: fixed;
+		/*padding: 5em;*/
+		left: 50%;
+		height: 15%;
+		width: 991.98px;
+		bottom: -5%;
+		transform: translate(-50%, -50%);
+	}
 	.temas {
 		width: 160px;
 		height: 160px;
 	}
-	.card{
+	.card {
 		width: 160px;
 	}
-	.titleTemaMenina{
-		font-family: 'Griffy';font-size: 70px; text-align: center;
+	.titleTemaMenina {
+		font-family: 'Griffy';
+		font-size: 70px;
+		text-align: center;
 	}
-	.titleTemaMenino{
-		font-family: 'Julee';font-size: 70px; text-align: center;
+	.titleTemaMenino {
+		font-family: 'Julee';
+		font-size: 70px;
+		text-align: center;
 	}
-	.nomeTema{
-		font-family: 'Sofia';font-size: 20px;
+	.nomeTema {
+		font-family: 'Sofia';
+		font-size: 20px;
 	}
-	.mosaico-fotos{
-		width: 150px; 
-		height:150px;
+	.mosaico-fotos {
+		width: 150px;
+		height: 150px;
 	}
 	/*.header-responsivo img{
 		width: 110px; 
@@ -360,35 +427,50 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 	}*/
 }
 
-
 @media screen and (min-width: 992px) and (max-width: 1199.98px) {
-	
-	.rodape{
+	.stuck {
 		position: fixed;
-  			bottom: 0%;
-  		width: 100%;
-  		height:17%;	
+		top: 20px;
+		/*left: 10px;*/
+		bottom: 20px;
+		width: 1199.98px;
+		overflow-y: scroll;
+		max-height: 80%;
 	}
 	
+	.rodape {
+		position: fixed;
+		/*padding: 5em;*/
+		left: 50%;
+		height: 15%;
+		width: 1199.98px;
+		bottom: -5%;
+		transform: translate(-50%, -50%);
+	}
 	.temas {
 		width: 200px;
-		height:200px;
+		height: 200px;
 	}
-	.card{
+	.card {
 		width: 350px;
 	}
-	.titleTemaMenina{
-		font-family: 'Griffy';font-size: 75px; text-align: center;
+	.titleTemaMenina {
+		font-family: 'Griffy';
+		font-size: 75px;
+		text-align: center;
 	}
-	.titleTemaMenino{
-		font-family: 'Julee';font-size: 75px; text-align: center;
+	.titleTemaMenino {
+		font-family: 'Julee';
+		font-size: 75px;
+		text-align: center;
 	}
-	.nomeTema{
-		font-family: 'Sofia';font-size: 24px;
+	.nomeTema {
+		font-family: 'Sofia';
+		font-size: 24px;
 	}
-	.mosaico-fotos{
-		width: 160px; 
-		height:160px;
+	.mosaico-fotos {
+		width: 160px;
+		height: 160px;
 	}
 	/*.header-responsivo img{
 		width: 140px; 
@@ -397,30 +479,45 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 }
 
 @media screen and (min-width: 1200px) {
-
-	.rodape{
+	.stuck {
 		position: fixed;
-  			bottom: 0%;
-  		width: 100%;
-  		height:17%;	
+		top: 20px;
+		/*left: 10px;*/
+		bottom: 20px;
+		min-width: 1200px;
+		overflow-y: scroll;
+		max-height: 80%;
 	}
 	
+	.rodape {
+		position: fixed;
+		/*padding: 5em;*/
+		left: 50%;
+		height: 15%;
+		min-width: 1200px;
+		bottom: -5%;
+		transform: translate(-50%, -50%);
+	}
 	.temas {
 		width: 100px;
-		height:100px;
+		height: 100px;
 	}
-	
-	.titleTemaMenina{
-		font-family: 'Griffy';font-size: 80px; text-align: center;
+	.titleTemaMenina {
+		font-family: 'Griffy';
+		font-size: 80px;
+		text-align: center;
 	}
-	.titleTemaMenino{
-		font-family: 'Julee';font-size: 80px; text-align: center;
+	.titleTemaMenino {
+		font-family: 'Julee';
+		font-size: 80px;
+		text-align: center;
 	}
-	.nomeTema{
-		font-family: 'Sofia';font-size: 40px;
+	.nomeTema {
+		font-family: 'Sofia';
+		font-size: 40px;
 	}
-	.mosaico-fotos{
-		width: 190px; 
+	.mosaico-fotos {
+		width: 190px;
 		height: 190px;
 	}
 	/*.header-responsivo img{
@@ -438,5 +535,3 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
     font-family: myFirstFont;
 }
 */
-
-
