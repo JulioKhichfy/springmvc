@@ -1,102 +1,107 @@
-body {
+html, body {
 	width: 100%;
 	height: 100%;
 	background-color: lightblue;
+}
+
+body {
 	font-family: 'Muli', 'Helvetica', 'Arial', 'sans-serif';
 }
 
-/*#mainNav {
-  border-color: rgba(34, 34, 34, 0.05);
-  background-color: white;
-  -webkit-transition: all .35s;
-  -moz-transition: all .35s;
-  transition: all .35s;
-  font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
-  font-weight: 200;
-  letter-spacing: 1px;
+a {
+	color: #fdcc52;
+	-webkit-transition: all .35s;
+	-moz-transition: all .35s;
+	transition: all .35s;
+}
+
+a:hover, a:focus {
+	color: #fcbd20;
+}
+
+hr {
+	max-width: 100px;
+	margin: 25px auto 0;
+	border-width: 1px;
+	border-color: rgba(34, 34, 34, 0.1);
+}
+
+hr.light {
+	border-color: white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
+	font-weight: 200;
+	letter-spacing: 1px;
+}
+
+p {
+	font-size: 18px;
+	line-height: 1.5;
+	margin-bottom: 20px;
+}
+
+section {
+	padding: 100px 0;
+}
+
+section h2 {
+	font-size: 50px;
+}
+
+#mainNav {
+	border-color: rgba(34, 34, 34, 0.05);
+	background-color: white;
+	-webkit-transition: all .35s;
+	-moz-transition: all .35s;
+	transition: all .35s;
+	font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
+	font-weight: 200;
+	letter-spacing: 1px;
 }
 
 #mainNav .navbar-brand {
-  color: #fdcc52;
-  font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
-  font-weight: 200;
-  letter-spacing: 1px;
+	color: #fdcc52;
+	font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
+	font-weight: 200;
+	letter-spacing: 1px;
 }
 
 #mainNav .navbar-brand:hover, #mainNav .navbar-brand:focus {
-  color: #fcbd20;
+	color: #fcbd20;
 }
 
 #mainNav .navbar-toggler {
-  font-size: 12px;
-  padding: 8px 10px;
-  color: #222222;
+	font-size: 12px;
+	padding: 8px 10px;
+	color: #222222;
 }
 
-#mainNav .navbar-nav > li > a {
-  font-size: 11px;
-  font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
-  letter-spacing: 2px;
-  text-transform: uppercase;
+#mainNav .navbar-nav>li>a {
+	font-size: 11px;
+	font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
+	letter-spacing: 2px;
+	text-transform: uppercase;
 }
 
-#mainNav .navbar-nav > li > a.active {
-  color: #fdcc52 !important;
-  background-color: transparent;
+#mainNav .navbar-nav>li>a.active {
+	color: #fdcc52 !important;
+	background-color: transparent;
 }
 
-#mainNav .navbar-nav > li > a.active:hover {
-  background-color: transparent;
+#mainNav .navbar-nav>li>a.active:hover {
+	background-color: transparent;
 }
 
-#mainNav .navbar-nav > li > a,
-#mainNav .navbar-nav > li > a:focus {
-  color: #222222;
+#mainNav .navbar-nav>li>a, #mainNav .navbar-nav>li>a:focus {
+	color: #222222;
 }
 
-#mainNav .navbar-nav > li > a:hover,
-#mainNav .navbar-nav > li > a:focus:hover {
-  color: #fdcc52;
-}*/
+#mainNav .navbar-nav>li>a:hover, #mainNav .navbar-nav>li>a:focus:hover {
+	color: #fdcc52;
+}
 
-/*@media (min-width: 992px) {
-  #mainNav {
-    border-color: transparent;
-    background-color: transparent;
-  }
-  #mainNav .navbar-brand {
-    color: fade(white, 70%);
-  }
-  #mainNav .navbar-brand:hover, #mainNav .navbar-brand:focus {
-    color: white;
-  }
-  #mainNav .navbar-nav > li > a,
-  #mainNav .navbar-nav > li > a:focus {
-    color: rgba(255, 255, 255, 0.7);
-  }
-  #mainNav .navbar-nav > li > a:hover,
-  #mainNav .navbar-nav > li > a:focus:hover {
-    color: white;
-  }
-  #mainNav.navbar-shrink {
-    border-color: rgba(34, 34, 34, 0.1);
-    background-color: white;
-  }
-  #mainNav.navbar-shrink .navbar-brand {
-    color: #222222;
-  }
-  #mainNav.navbar-shrink .navbar-brand:hover, #mainNav.navbar-shrink .navbar-brand:focus {
-    color: #fdcc52;
-  }
-  #mainNav.navbar-shrink .navbar-nav > li > a,
-  #mainNav.navbar-shrink .navbar-nav > li > a:focus {
-    color: #222222;
-  }
-  #mainNav.navbar-shrink .navbar-nav > li > a:hover,
-  #mainNav.navbar-shrink .navbar-nav > li > a:focus:hover {
-    color: #fdcc52;
-  }
-}*/
 header.masthead {
 	position: relative;
 	width: 100%;
@@ -162,15 +167,6 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 }
 
 @media screen and (min-width: 100.00px) and (max-width: 239.98px) {
-	.stuck {
-		position: fixed;
-		top: 20px;
-		/*left: 10px;*/
-		bottom: 20px;
-		width: 239.98px;
-		overflow-y: scroll;
-		max-height: 80%;
-	}
 	.rodape {
 		position: fixed;
 		/*padding: 5em;*/
@@ -183,54 +179,6 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 }
 
 @media screen and (min-width: 240.00px) and (max-width: 339.98px) {
-	.stuck {
-		position: fixed;
-		top: 20px;
-		/*left: 10px;*/
-		bottom: 20px;
-		width: 339.98px;
-		overflow-y: scroll;
-		max-height: 80%;
-	}
-	#mainNav {
-		border-color: white;
-		background-color: white;
-	}
-	/*#mainNav .imagem-tam{
-	  	width: auto;
-	  	height: auto;
-	  }*/
-	#mainNav .navbar-brand {
-		color: fade(white, 70%);
-	}
-	#mainNav .navbar-brand:hover, #mainNav .navbar-brand:focus {
-		color: white;
-	}
-	#mainNav .navbar-nav>li>a, #mainNav .navbar-nav>li>a:focus {
-		color: rgba(255, 255, 255, 0.7);
-	}
-	#mainNav .navbar-nav>li>a:hover, #mainNav .navbar-nav>li>a:focus:hover {
-		color: white;
-	}
-	#mainNav.navbar-shrink {
-		border-color: rgba(34, 34, 34, 0.1);
-		background-color: white;
-	}
-	#mainNav.navbar-shrink .navbar-brand {
-		color: #222222;
-	}
-	#mainNav.navbar-shrink .navbar-brand:hover, #mainNav.navbar-shrink .navbar-brand:focus
-		{
-		color: #fdcc52;
-	}
-	#mainNav.navbar-shrink .navbar-nav>li>a, #mainNav.navbar-shrink .navbar-nav>li>a:focus
-		{
-		color: #222222;
-	}
-	#mainNav.navbar-shrink .navbar-nav>li>a:hover, #mainNav.navbar-shrink .navbar-nav>li>a:focus:hover
-		{
-		color: #fdcc52;
-	}
 	section.apresentacao-temas {
 		width: 100%;
 		height: 83%;
@@ -278,15 +226,6 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 }
 
 @media screen and (min-width: 340.00px) and (max-width: 575.98px) {
-	.stuck {
-		position: fixed;
-		top: 20px;
-		/*left: 10px;*/
-		bottom: 20px;
-		width: 575.98px;
-		overflow-y: scroll;
-		max-height: 80%;
-	}
 	.rodape {
 		position: fixed;
 		/*padding: 5em;*/
@@ -327,15 +266,6 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 }
 
 @media screen and (min-width: 576px) and (max-width: 767.98px) {
-	.stuck {
-		position: fixed;
-		top: 20px;
-		/*left: 10px;*/
-		bottom: 20px;
-		width: 767.98px;
-		overflow-y: scroll;
-		max-height: 80%;
-	}
 	.rodape {
 		position: fixed;
 		/*padding: 5em;*/
@@ -377,14 +307,40 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 }
 
 @media screen and (min-width: 768px) and (max-width: 991.98px) {
-	.stuck {
-		position: fixed;
-		top: 20px;
-		/*left: 10px;*/
-		bottom: 20px;
-		width: 991.98px;
-		overflow-y: scroll;
-		max-height: 80%;
+	#mainNav {
+		border-color: transparent;
+		background-color: transparent;
+	}
+	#mainNav .navbar-brand {
+		color: fade(white, 70%);
+	}
+	#mainNav .navbar-brand:hover, #mainNav .navbar-brand:focus {
+		color: white;
+	}
+	#mainNav .navbar-nav>li>a, #mainNav .navbar-nav>li>a:focus {
+		color: rgba(255, 255, 255, 0.7);
+	}
+	#mainNav .navbar-nav>li>a:hover, #mainNav .navbar-nav>li>a:focus:hover {
+		color: white;
+	}
+	#mainNav.navbar-shrink {
+		border-color: rgba(34, 34, 34, 0.1);
+		background-color: white;
+	}
+	#mainNav.navbar-shrink .navbar-brand {
+		color: #222222;
+	}
+	#mainNav.navbar-shrink .navbar-brand:hover, #mainNav.navbar-shrink .navbar-brand:focus
+		{
+		color: #fdcc52;
+	}
+	#mainNav.navbar-shrink .navbar-nav>li>a, #mainNav.navbar-shrink .navbar-nav>li>a:focus
+		{
+		color: #222222;
+	}
+	#mainNav.navbar-shrink .navbar-nav>li>a:hover, #mainNav.navbar-shrink .navbar-nav>li>a:focus:hover
+		{
+		color: #fdcc52;
 	}
 	
 	.rodape {
@@ -428,14 +384,40 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 }
 
 @media screen and (min-width: 992px) and (max-width: 1199.98px) {
-	.stuck {
-		position: fixed;
-		top: 20px;
-		/*left: 10px;*/
-		bottom: 20px;
-		width: 1199.98px;
-		overflow-y: scroll;
-		max-height: 80%;
+	#mainNav {
+		border-color: transparent;
+		background-color: transparent;
+	}
+	#mainNav .navbar-brand {
+		color: fade(white, 70%);
+	}
+	#mainNav .navbar-brand:hover, #mainNav .navbar-brand:focus {
+		color: white;
+	}
+	#mainNav .navbar-nav>li>a, #mainNav .navbar-nav>li>a:focus {
+		color: rgba(255, 255, 255, 0.7);
+	}
+	#mainNav .navbar-nav>li>a:hover, #mainNav .navbar-nav>li>a:focus:hover {
+		color: white;
+	}
+	#mainNav.navbar-shrink {
+		border-color: rgba(34, 34, 34, 0.1);
+		background-color: white;
+	}
+	#mainNav.navbar-shrink .navbar-brand {
+		color: #222222;
+	}
+	#mainNav.navbar-shrink .navbar-brand:hover, #mainNav.navbar-shrink .navbar-brand:focus
+		{
+		color: #fdcc52;
+	}
+	#mainNav.navbar-shrink .navbar-nav>li>a, #mainNav.navbar-shrink .navbar-nav>li>a:focus
+		{
+		color: #222222;
+	}
+	#mainNav.navbar-shrink .navbar-nav>li>a:hover, #mainNav.navbar-shrink .navbar-nav>li>a:focus:hover
+		{
+		color: #fdcc52;
 	}
 	
 	.rodape {
@@ -479,16 +461,42 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 }
 
 @media screen and (min-width: 1200px) {
-	.stuck {
-		position: fixed;
-		top: 20px;
-		/*left: 10px;*/
-		bottom: 20px;
-		min-width: 1200px;
-		overflow-y: scroll;
-		max-height: 80%;
+	#mainNav {
+		border-color: transparent;
+		background-color: white;
+		font-size: 40px;
 	}
-	
+	#mainNav .navbar-brand {
+		color: fade(white, 70%)
+	}
+	#mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
+		color: #2e3436
+	}
+	#mainNav .navbar-nav>li>a, #mainNav .navbar-nav>li>a:focus {
+		color: rgba(255, 255, 255, .7)
+	}
+	#mainNav .navbar-nav>li>a:focus:hover, #mainNav .navbar-nav>li>a:hover {
+		color: #2e3436
+	}
+	#mainNav.navbar-shrink {
+		border-color: rgba(34, 34, 34, .1);
+		background-color: #fff
+	}
+	#mainNav.navbar-shrink .navbar-brand {
+		color: #222
+	}
+	#mainNav.navbar-shrink .navbar-brand:focus, #mainNav.navbar-shrink .navbar-brand:hover
+		{
+		color: #fdcc52
+	}
+	#mainNav.navbar-shrink .navbar-nav>li>a, #mainNav.navbar-shrink .navbar-nav>li>a:focus
+		{
+		color: #222
+	}
+	#mainNav.navbar-shrink .navbar-nav>li>a:focus:hover, #mainNav.navbar-shrink .navbar-nav>li>a:hover
+		{
+		color: #fdcc52
+	}
 	.rodape {
 		position: fixed;
 		/*padding: 5em;*/

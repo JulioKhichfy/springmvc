@@ -2,7 +2,7 @@
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 
-		<div class="stuck">
+		
 		<header class="masthead">
 		
 			<div class="header-content">
@@ -128,7 +128,7 @@
 			</div><!-- <div class="container"> -->
 		</section>
 	</c:forEach> 
-	</div>
+	
 	<!--<section class="cta">
 		<div class="cta-content">
 			<div class="container">
